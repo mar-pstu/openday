@@ -1,0 +1,29 @@
+//-
+	Главная страница
+	Блок "Галерея"
+
+
+
+mixin fotos_item( args )
+	figure.fotos__item.item: a.link( href=args.foto, rel="fotos", title=args.title )
+		img.thumbnail( src=args.thumbnail, alt=args.title )
+		figcapture.title #{args.title}
+
+
+
+
+section.section.fotos#fotos: .container
+	.text-center: h2 Галерея
+	p.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam debitis modi molestiae totam quia ex voluptatem similique officiis sed quibusdam, nemo sequi provident, atque asperiores sit illum autem. Odio, enim.
+	#fotos-gallery.gallery
+		+fotos_item( { title: 'Подпись к фото №01', foto: src.img+'fotos/full-01.jpg', thumbnail: src.img+'fotos/medium-01.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №02', foto: src.img+'fotos/full-02.jpg', thumbnail: src.img+'fotos/medium-02.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №03', foto: src.img+'fotos/full-03.jpg', thumbnail: src.img+'fotos/medium-03.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №04', foto: src.img+'fotos/full-04.jpg', thumbnail: src.img+'fotos/medium-04.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №05', foto: src.img+'fotos/full-05.jpg', thumbnail: src.img+'fotos/medium-05.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №06', foto: src.img+'fotos/full-06.jpg', thumbnail: src.img+'fotos/medium-06.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №07', foto: src.img+'fotos/full-07.jpg', thumbnail: src.img+'fotos/medium-07.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №08', foto: src.img+'fotos/full-08.jpg', thumbnail: src.img+'fotos/medium-08.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №09', foto: src.img+'fotos/full-09.jpg', thumbnail: src.img+'fotos/medium-09.jpg' } )
+		+fotos_item( { title: 'Подпись к фото №10', foto: src.img+'fotos/full-10.jpg', thumbnail: src.img+'fotos/medium-10.jpg' } )
+	p.text-center: a.btn.btn-primary.btn-lg( href="#" ) Вся галерея

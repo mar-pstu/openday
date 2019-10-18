@@ -1,0 +1,73 @@
+//
+//
+//
+//
+
+
+
+
+
+
+.steps {
+
+
+	list-style-type: none;
+	padding-left: 0;
+	margin: 1em auto;
+
+	
+	.item {
+		margin: 1em 0;
+		padding: 1em 1em 0 1em;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		@include min-width( $screen-sm ) {
+			padding: 1em 3em 0 3em;
+		}
+	}
+
+	.item + .item {
+		border-top: 1px solid lighten( $brand-primary, 55% );
+	}
+
+
+	&__item {
+		* {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.thumbnail {
+			flex-shrink: 0;
+			width: 3em;
+			height: 3em;
+			overflow: hidden;
+			border-radius: 50%;
+			@include min-width( $screen-sm ) {
+				width: 7em;
+				height: 7em;
+			}
+		}
+		.thumbnail ~ .overlay {
+			margin-left: 1em;
+			@include min-width( $screen-sm ) {
+				margin-left: 2em;
+			}
+		}
+		.time {
+			color: $brand-warning;
+			font-size: 85%;
+			font-weight: bold;
+			letter-spacing: 2px;
+		}
+		.time:before {
+			@extend %icon;
+			@extend %background-icon;
+			@extend %icon-clock;
+			margin-right: .3em;
+			display: inline-block;
+		}
+	}
+
+
+}

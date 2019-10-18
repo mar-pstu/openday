@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+.error404 {
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	.wrap {
+		margin: 3em auto;
+		overflow: hidden;
+		box-shadow: $box-shadow;
+		text-align: center;
+		padding: 1.5em 1em;
+		background-color: #fff;
+		img.logo {
+			max-width: 250px;
+		}
+	}
+
+	h1.title {
+		margin: 0;
+	}
+
+	.shortcuts {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.shortcuts li {
+		display: inline-block;
+		margin: 0 0.5em;
+	}
+
+	.shortcuts a {
+		color: lighten( $text-color, 20% );
+		font-size: 75%;
+		transition: color 200ms;
+		&:hover {
+			text-decoration: none;
+			color: $text-color;
+		}
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	.home-link {
+		margin-top: 1em;
+	}
+
+	.home-link:after {
+		@extend %icon;
+		@extend %icon-home;
+		@extend %background-icon;
+		vertical-align: baseline;
+		display: inline-block;
+		margin-left: .5em;
+	}
+
+
+}

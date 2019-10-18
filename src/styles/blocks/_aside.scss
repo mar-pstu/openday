@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+
+
+
+.aside {
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+
+	&--basement {
+		background-color: $brand-default;
+		* { color: #fff; }
+	}
+
+
+	&--column {
+		padding-left: 2em;
+		padding-right: 2em;
+		position: relative;
+		margin-top: 2em;
+		@include min-width( $screen-lg ) {
+			margin-top: 0;
+		}
+	}
+	&--column::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1000%;
+		height: 1000%;
+		z-index: -1;
+		transform: translate( -50%, 0% );
+		background-color: lighten( $brand-primary, 55% );
+		@include min-width( $screen-lg ) {
+			transform: translate( 0%, 0% );
+		}
+	}
+
+
+}

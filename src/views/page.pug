@@ -1,0 +1,19 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'page';
+	- page.title = 'Страница / пост';
+
+
+
+block main
+	.container: .row
+		.col-xs-12.col-sm-12.col-md-8.col-lg-8
+			include blocks/_pageheader
+			include blocks/_breadcrumb
+			include blocks/_content
+			include blocks/_content
+			include blocks/_pager
+		.col-xs-12.col-sm-12.col-md-4.col-lg-4
+			include asides/_column

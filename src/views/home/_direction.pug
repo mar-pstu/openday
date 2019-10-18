@@ -1,0 +1,35 @@
+//-
+	Главная страница
+
+
+
+
+
+
+mixin direction_item( args )
+	.col-xs-12.col-sm-6.col-md-4.col-lg-4
+		+widget( args )
+			block
+
+
+
+
+
+
+section.section.direction#direction: .container
+	.text-center: h2 Как к нам приехать
+	.content
+		.row.center-xs
+			+direction_item( { title: 'Автовокзал' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quisquam aspernatur consequuntur, similique officia sed fugiat natus. Deleniti quidem voluptatem tempore pariatur doloribus, accusamus expedita, laboriosam vero sint alias atque.
+			+direction_item( { title: 'Пригородная автостанция' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et maxime impedit, molestiae ea provident, nobis corporis, minima odio quo nam, accusamus sunt at quod. Quasi harum maxime magnam. Suscipit, iste!
+			+direction_item( { title: 'ЖД' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius reiciendis qui laborum commodi eaque sequi, explicabo quam nihil quis quaerat necessitatibus velit natus a corporis harum, sint vero recusandae, quos!
+			+direction_item( { title: 'Приморский район' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione libero laboriosam blanditiis itaque, dignissimos amet porro recusandae, consequatur molestias ipsam tempora doloremque aspernatur ea consectetur accusantium sed eveniet ex necessitatibus.
+			+direction_item( { title: 'Левый берег' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus magnam inventore veritatis expedita et accusamus, nemo eum sequi, assumenda, quas deleniti perferendis qui dolor harum nisi. Sed dolorem veniam eligendi?
+			+direction_item( { title: 'Кальмиусский район' } )
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat laboriosam esse rem ut velit dolores accusamus voluptatem possimus, temporibus, earum enim autem, impedit pariatur necessitatibus. Possimus placeat ad eos velit.
+			iframe( src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1358.0921444349005!2d37.53998246043922!3d47.09545777292084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa6496d27f2ca6fcb!2z0J_RgNC40LDQt9C-0LLRgdGM0LrQuNC5INC00LXRgNC20LDQstC90LjQuSDRgtC10YXQvdGW0YfQvdC40Lkg0YPQvdGW0LLQtdGA0YHQuNGC0LXRgiDRltC8Lg!5e0!3m2!1sru!2sua!4v1571219561550!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" )

@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.person {
+
+	display: flex;
+	margin: 1em auto;
+	max-width: 300px;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1em;
+	text-align: center;
+
+	.foto {
+		position: relative;
+		order: -1;
+	}
+
+	img {
+		display: block;
+		width: 150px;
+		height: 150px;
+	}
+
+	.socials {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+		@include min-width( $screen-md ) {
+			font-size: 75%;
+		}
+	}
+
+	.socials li {
+		display: block;
+		margin: 0;
+	}
+
+	.excerpt {
+		margin: 0 0 1em 0;
+	}
+
+	.permalink {
+		margin-top: auto;
+	}
+
+}

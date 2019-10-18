@@ -1,0 +1,25 @@
+//-
+	Набор миксинов
+
+
+
+
+mixin person( args )
+	.person
+		h3.name #{args.name}
+		.foto
+			img.lazy( src="#", data-src=args.foto, alt=args.name )
+			include ../blocks/_socials
+		p.excerpt #{args.excerpt}
+		a.btn.btn-primary.btn-sm( href="#" ) Подробней
+
+
+
+
+mixin widget( args )
+	.widget
+		if ( args.title )
+			h3.widget__title #{args.title}
+		else
+			h3.widget__title Hello, world!
+		block

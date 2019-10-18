@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%button {
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	padding: 0.5em 2em;
+	text-transform: uppercase;
+	&:hover { text-decoration: none; }
+
+}
+
+
+%button-close {
+	@extend %background-icon;
+	@extend %icon-close;
+	background-color: transparent;
+}
+
+
+%button-default {
+	background-color: $brand-default;
+	color: #fff;
+	&:hover { background-color: lighten( $brand-default, 5% ); }
+}
+
+
+%button-primary {
+	background-color: $brand-primary;
+	color: #fff;
+	&:hover { background-color: lighten( $brand-primary, 5% ); }
+}
+
+
+
+%button-success {
+	background-color: darken( $brand-success, 3% );
+	color: $titles-color;
+	&:hover { background-color: $brand-success; }
+}
+
+
+
+%button-warning {
+	background-color: $brand-warning;
+	color: #fff;
+	&:hover { background-color: lighten( $brand-warning, 5% ); }
+}
+
+
+
+%button-info {
+	background-color: $brand-info;
+	color: #fff;
+	&:hover { background-color: lighten( $brand-info, 5% ); }
+}
+
+
+
+%button-small {
+	padding: 0 1em;
+	font-size: 85%;
+}
+
+
+
+%button-large {
+	padding: 1em 3em;
+}

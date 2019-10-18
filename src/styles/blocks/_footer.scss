@@ -1,0 +1,25 @@
+//
+//
+//	ПОдвал сайта
+//
+//
+
+
+
+.footer {
+
+	.socials {
+		text-align: center;
+	}
+
+	.copyright {
+		text-align: center;
+		@include min-width( $screen-md ) { text-align: left; }
+	}
+
+	.developer {
+		text-align: center;
+		@include min-width( $screen-md ) { text-align: right; }
+	}
+
+}

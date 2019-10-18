@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.openday-steps {
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.item {
+
+		.add-image-button {
+			margin: .5em;
+		}
+
+		.thumbnail {
+			margin: .5em;
+		}
+
+		.thumbnail img {
+			display: block;
+			width: 5em;
+			height: 5em;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+
+		.time {
+			color: $brand-warning;
+			font-size: 85%;
+			font-weight: bold;
+			letter-spacing: 2px;
+			margin-bottom: 0;
+		}
+
+		.time:before {
+			@extend %icon;
+			@extend %background-icon;
+			@extend %icon-clock;
+			margin-right: .3em;
+			display: inline-block;
+		}
+
+		.title {
+			margin-top: 0;
+		}
+
+		.excerpt {
+			color: #888;
+			font-size: 85%;
+		}
+
+		.time:before {
+			@extend %icon;
+			@extend %background-icon;
+			@extend %icon-clock;
+			margin-right: .3em;
+			display: inline-block;
+		}
+
+		.overlay {
+			margin: .5em;
+		}
+
+	}
+
+}

@@ -1,0 +1,39 @@
+//
+//	WP
+//	Странциа Архива
+//
+
+
+
+
+.archive {
+
+
+	.entry {
+		margin: 2em auto
+	}
+
+	&__entry {
+		.thumbnail {
+			display: block;
+			margin: .5em auto;
+			box-shadow: $box-shadow;
+			position: relative;
+		}
+		.thumbnail img {
+			display: block;
+		}
+		.title {
+			margin: 0;
+		}
+		.excerpt {
+			margin: 0;
+		}
+		.publish {
+			@extend %publish;
+			font-size: 75%;
+		}
+	}
+
+	
+}

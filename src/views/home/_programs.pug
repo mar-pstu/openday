@@ -1,0 +1,60 @@
+//-
+	Главная страница
+	Секция "Программа проведения мероприятия"
+
+
+
+
+
+
+mixin programs_tab_title( args )
+	li: a( class=args.active, href="#" + args.slug )
+		.title #{args.title}
+		.excerpt #{args.excerpt}
+
+
+mixin programs_tab_content( args )
+	article( class="tab " + args.active, id=args.id )
+		block
+
+
+mixin step( args )
+	li.steps__item.item
+		img.thumbnail.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+		.overlay
+			time.time #{args.time}
+			h4.title #{args.title}
+			p.excerpt #{args.excerpt}
+
+
+
+section.section.programs#programs: .container
+	.text-center: h2 Программа
+	p.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cumque, velit nam blanditiis dolorum accusantium, qui minus quaerat modi, voluptate culpa, assumenda earum. Facere incidunt ab, inventore quae, sed cum.
+	.content
+		ul.headings
+			+programs_tab_title( { title: 'День 1', excerpt: '20.10.2019', slug: 'day1', active: 'active' } )
+			+programs_tab_title( { title: 'День 2', excerpt: '21.10.2019', slug: 'day2', active: '' } )
+			+programs_tab_title( { title: 'День 3', excerpt: '22.10.2019', slug: 'day3', active: '' } )
+		+programs_tab_content( { id: 'day1', active: 'active' } )
+			h3.text-center День первый
+			ul.steps
+				+step( { thumbnail: src.img + 'steps/01.jpg', time: '08:00', title: 'ВЫступление 1', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/02.jpg', time: '09:00', title: 'ВЫступление 2', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/03.jpg', time: '10:00', title: 'ВЫступление 3', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+		+programs_tab_content( { id: 'day2', active: '' } )
+			h3.text-center День второй
+			ul.steps
+				+step( { thumbnail: src.img + 'steps/01.jpg', time: '08:00', title: 'ВЫступление 1', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/02.jpg', time: '09:00', title: 'ВЫступление 2', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/03.jpg', time: '10:00', title: 'ВЫступление 3', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/01.jpg', time: '11:00', title: 'ВЫступление 4', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/02.jpg', time: '11:30', title: 'ВЫступление 5', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/03.jpg', time: '12:00', title: 'ВЫступление 6', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+		+programs_tab_content( { id: 'day3', active: '' } )
+			h3.text-center День третий
+			ul.steps
+				+step( { thumbnail: src.img + 'steps/01.jpg', time: '09:00', title: 'ВЫступление 1', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/02.jpg', time: '10:00', title: 'ВЫступление 2', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/03.jpg', time: '11:00', title: 'ВЫступление 3', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )
+				+step( { thumbnail: src.img + 'steps/04.jpg', time: '11:30', title: 'ВЫступление 4', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit' } )

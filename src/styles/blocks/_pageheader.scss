@@ -1,0 +1,39 @@
+//-
+//-	Заголовок старницы
+//-
+
+
+.pageheader {
+
+	margin: 1em auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	.title {
+		text-align: left;
+		font-size: 2em;
+	}
+
+	.thumbnail {
+		flex-shrink: 0;
+		width: 5em;
+		box-shadow: $box-shadow;
+		@include min-width( 480px ) {
+			width: 8em;
+		}
+	}
+
+	.thumbnail + .title {
+		margin-left: 1em;
+	}
+
+	.wp-post-thumbnail {
+		display: block;
+	}
+
+	h1, h2, p {
+		margin: 0;
+	}
+}

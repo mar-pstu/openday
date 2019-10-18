@@ -1,0 +1,30 @@
+//-
+	Сайдбар подвала
+
+
+
+
+mixin widget_basement( args )
+	.col-xs-12.col-sm-6.col-md-3.col-lg-3
+		+widget( args )
+			block
+
+
+
+.container: .row.center-xs
+	+widget_basement( { title: blog.name } )
+		img.center-block( src=src.img+'logo.png', alt=blog.name, width=150, height=150 )
+		p вул. Університетська, 7, м. Марiуполь, 87555, Україна
+		p Прес-центр: (0629) 44-64-63
+	+widget_basement( { title: 'Заголовок виджета' } )
+		ul
+			li: a( href="#" ) Lorem ipsum dolor sit amet, consectetur adipisicing elit
+			li: a( href="#" ) Adipisci sapiente quaerat, quod nisi
+			li: a( href="#" ) Dolor minus nulla doloremque
+			li: a( href="#" ) Autem ab provident odit placeat dolores
+			li: a( href="#" ) Maxime eveniet, cupiditate delectus aspernatur officia omnis
+			li: a( href="#" ) Dolor minus nulla doloremque
+	+widget_basement( { title: 'Заголовок виджета' } )
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci sapiente quaerat, quod nisi, dolor minus nulla doloremque? Autem ab provident odit placeat dolores, maxime eveniet, cupiditate delectus aspernatur officia omnis.
+	+widget_basement( { title: 'Заголовок виджета' } )
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci sapiente quaerat, quod nisi, dolor minus nulla doloremque? Autem ab provident odit placeat dolores, maxime eveniet, cupiditate delectus aspernatur officia omnis.

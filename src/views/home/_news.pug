@@ -1,0 +1,30 @@
+//-
+	Главная странциа
+	Секция новостей
+
+
+
+
+
+mixin news_entry( args )
+	.col-xs-12.col-sm-7.col-md-4.col-lg-4: .news__entry.entry
+		.thumbnail
+			a( href="#" ): img.wp-post-thumbnail.lazy( src="#", data-src=args.thumbnail, alt=args.title )
+			time.publish #[span.day 20] #[span.month окт] #[span.year 2019]
+		h3.title: a( href="#" ) #{args.title}
+		p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nihil fuga tempore enim repellendus mollitia labore maxime, ipsum veritatis, quae eius quibusdam nobis pariatur accusamus iusto temporibus quasi omnis cum!
+		a.btn.btn-warning.permalink( href="#" ) Подробней
+
+
+
+
+
+
+section.section.news.lazy#news( data-src=src.img+'news.svg' ): .container
+	.text-center: h2 Блог
+	p.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cumque, velit nam blanditiis dolorum accusantium, qui minus quaerat modi, voluptate culpa, assumenda earum. Facere incidunt ab, inventore quae, sed cum.
+	.row.center-xs
+		+news_entry( { thumbnail: src.img+'fotos/medium-03.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod' } )
+		+news_entry( { thumbnail: src.img+'thumbnail.png', title: 'Duis aute irure dolor in reprehenderit in voluptate velit esse' } )
+		+news_entry( { thumbnail: src.img+'thumbnail.png', title: 'Excepteur sint occaecat cupidatat non	proident' } )
+	p.text-center: a.btn.btn-primary.btn-lg( href="#" ) Смотреть все новости

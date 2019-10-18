@@ -1,0 +1,69 @@
+
+
+//
+// Список социальных сетей
+//
+//
+
+
+
+
+
+.socials {
+
+
+
+	padding-left: 0;
+	list-style-type: none;
+	margin: .5em 0;
+
+
+
+	li {
+		display: inline-block;
+		margin: 0 .5em;
+		vertical-align: middle;
+	}
+
+
+	a {
+		@extend %xy-center;
+		width: 2em;
+		height: 2em;
+		background-color: $body-color;
+		box-shadow: none;
+	}
+
+
+
+	// a:hover {
+	// 	box-shadow: 0 0 .5em rgba( 0, 0, 0, .4 );
+	// }
+
+
+
+	a:hover::before {
+		opacity: 1;
+	}
+
+
+
+	a::before {
+		@extend %background-icon;
+		content: '';
+		width: 1em;
+		height: 1em;
+		opacity: .6;
+		transition: opacity .2s;
+	}
+
+
+
+	a.facebook::before { @extend %icon-facebook; }
+	a.twitter::before { @extend %icon-twitter; }
+	a.instagram::before { @extend %icon-instagram; }	
+	a.linkedin::before { @extend %icon-linkedin; }
+
+
+
+}

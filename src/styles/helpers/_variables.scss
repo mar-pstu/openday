@@ -1,0 +1,40 @@
+//
+//	Переменные
+//
+
+
+$screen-sm:					576px;
+$screen-md:					768px;
+$screen-lg:					992px;
+$screen-xl:					1200px;
+$flexboxgrid-grid-columns: 12;
+$flexboxgrid-gutter-width: 20px;
+$flexboxgrid-outer-margin: 20px;
+$flexboxgrid-breakpoints:
+  xs $screen-sm 540px,
+  sm $screen-md 720px,
+  md $screen-lg 960px,
+  lg $screen-xl 1140px;
+$flexboxgrid-max-width: 1920px;
+$smallest: xs;
+
+
+
+$brand-default:         #3b364d;
+$brand-primary:         #4d407c;
+$brand-success:         #fff300;
+$brand-warning:         #e21d47;
+$brand-info:            #32ac49;
+
+$body-color: #fff;
+$titles-color: #000;
+$text-color: $brand-default;
+$link-color: $titles-color;
+
+$font-size-base:		13px;
+$line-height-base:	20em / 13em;
+$line-height-computed: floor( $font-size-base * $line-height-base );
+
+$font-family-base: 'Montserrat', sans-serif;
+
+$box-shadow: 0 1em 4em rgba( 0, 0, 0, 0.2 );;

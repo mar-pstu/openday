@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form {
+
+	label {
+		display: block;
+		font-weight: bold;
+		margin-top: 0.5em;
+	}
+
+	textarea,
+	input[ type="text" ],
+	input[ type="email" ],
+	input[ type="password" ] {
+		display: block;
+		border: 1px solid $brand-primary;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		width: 100%;
+		box-sizing: border-box;
+		outline: none;
+		background-color: #fff;
+		padding: 1em 2em;
+		border: none;
+		transition: box-shadow .2s;
+		&:active,
+		&:focus {
+			box-shadow: $box-shadow;
+		}
+	}
+
+
+	textarea {
+		resize: vertical;
+	}
+
+
+	[ type="submit" ] {
+		@extend %button;
+		// @extend %button-small;
+		@extend %button-info;
+		// margin: 1em auto;
+	}
+
+
+}

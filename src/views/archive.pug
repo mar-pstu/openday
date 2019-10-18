@@ -1,0 +1,38 @@
+extend layout/_index
+
+
+block variables
+	- page.type = 'archive';
+	- page.title = 'Архив';
+
+
+
+mixin archive_entry( args )
+	.archive__entry.entry: .row.center-xs
+		.col-xs-8.col-sm-4.col-md-4.col-lg-4
+			a.thumbnail( href="#" )
+				img.lazy.wp-post-thumbnail( src="#", data-src=args.				thumbnail, alt=args.title )
+				time.publish #[span.day 20] #[span.month окт] #[span.year 2019]
+		.col-xs-12.col-sm-8.col-md-8.col-lg-8
+			h3.title #{args.title}
+			p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam, omnis perspiciatis reprehenderit temporibus sint porro libero? Id aut nam animi eveniet perferendis repudiandae aperiam, mollitia expedita officia consectetur laboriosam.
+			p.text-right: a.permalink.btn.btn-primary( href="#" ) Подробней
+
+
+
+block main
+	.container: .row
+		.col-xs-12.col-sm-12.col-md-8.col-lg-8
+			include blocks/_pageheader
+			include blocks/_breadcrumb
+			+archive_entry( { thumbnail: src.img+'fotos/medium-04.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eius, inventore! Qui, q ab, laudantium.' } )
+			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
+			+archive_entry( { thumbnail: src.img+'fotos/medium-03.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
+			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
+			+archive_entry( { thumbnail: src.img+'fotos/medium-05.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
+			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam, voluptates auugit quos delectus!' } )
+			+archive_entry( { thumbnail: src.img+'fotos/medium-06.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quo praesentium aperi' } )
+			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat omnis vero voluptate repesse ea!' } )
+			include blocks/_pagination
+		.col-xs-12.col-sm-12.col-md-4.col-lg-4
+			include asides/_column
