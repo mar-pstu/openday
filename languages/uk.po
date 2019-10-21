@@ -1,0 +1,348 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-10-21 15:05+0300\n"
+"PO-Revision-Date: 2019-10-21 15:06+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: 404.php:6 404.php:26 customizer/404.php:44
+msgid "Ошибка 404"
+msgstr "Помилка 404"
+
+#: 404.php:23
+msgid "На главную"
+msgstr "На головну"
+
+#: 404.php:40
+msgid "Вернуться на главную"
+msgstr "Повернутися на головну"
+
+#: customizer/404.php:13
+msgid "Страница ошибки 404"
+msgstr "Сторінка помилки 404"
+
+#: customizer/404.php:15
+msgid "Якорь #error404"
+msgstr "Якір #error404"
+
+#: customizer/404.php:34 customizer/aboutus.php:34 customizer/direction.php:34
+#: customizer/fotos.php:34 customizer/jumbotron.php:34
+#: customizer/lectors.php:34 customizer/news.php:34 customizer/programs.php:34
+msgid "Использовать секцию"
+msgstr "Використовувати секцію"
+
+#: customizer/404.php:53 customizer/aboutus.php:71 customizer/direction.php:71
+#: customizer/fotos.php:52 customizer/jumbotron.php:71
+#: customizer/lectors.php:71 customizer/news.php:72 customizer/programs.php:71
+msgid "Заголовок"
+msgstr "Заголовок"
+
+#: customizer/404.php:72 customizer/direction.php:90 customizer/fotos.php:71
+#: customizer/lectors.php:90 customizer/news.php:91 customizer/programs.php:90
+msgid "Подзаголовок"
+msgstr "Підзаголовок"
+
+#: customizer/aboutus.php:13 customizer/aboutus.php:62
+msgid "О нас"
+msgstr "Про нас"
+
+#: customizer/aboutus.php:15
+msgid "Секция главной страницы. Якорь #aboutus"
+msgstr "Секція головної сторінки. Якір #aboutus"
+
+#: customizer/aboutus.php:52 customizer/direction.php:52
+#: customizer/jumbotron.php:52 customizer/lectors.php:52
+#: customizer/programs.php:52
+msgid "Выбор страницы"
+msgstr "Вибір сторінки"
+
+#: customizer/aboutus.php:90 customizer/jumbotron.php:90
+#: src/scripts/gutenberg/person.js:200 src/scripts/gutenberg/step.js:133
+msgid "Описание"
+msgstr "Опис"
+
+#: customizer/aboutus.php:101 customizer/jumbotron.php:101 parts/archive.php:17
+#: parts/home/aboutus.php:14 parts/home/jumbotron.php:11 parts/home/news.php:67
+#: src/scripts/gutenberg/person.js:254
+msgid "Подробней"
+msgstr "Докладніше"
+
+#: customizer/aboutus.php:110 customizer/jumbotron.php:110
+#: customizer/news.php:111
+msgid "Текст кнопки"
+msgstr "Текст кнопки"
+
+#: customizer/aboutus.php:130 customizer/jumbotron.php:130
+msgid "Фон"
+msgstr "Фон"
+
+#: customizer/direction.php:13 customizer/direction.php:62
+#: parts/home/direction.php:19
+msgid "Как к нам приехать"
+msgstr "Як до нас приїхати"
+
+#: customizer/direction.php:15
+msgid "Секция главной страницы. Якорь #direction"
+msgstr "Секція головної сторінки. Якір #direction"
+
+#: customizer/fotos.php:13 customizer/fotos.php:93 customizer/fotos.php:114
+msgid "Фото"
+msgstr "Фото"
+
+#: customizer/fotos.php:15
+msgid "Секция главной страницы. Якорь #fotos"
+msgstr "Секція головної сторінки. Якір #fotos"
+
+#: customizer/fotos.php:43 parts/home/fotos.php:25
+msgid "Галерея"
+msgstr "Галерея"
+
+#: customizer/jumbotron.php:13
+msgid "Первый экран"
+msgstr "Перший екран"
+
+#: customizer/jumbotron.php:15
+msgid "Секция главной страницы. Якорь #jumbotron"
+msgstr "Секція головної сторінки. Якір #jumbotron"
+
+#: customizer/jumbotron.php:150
+msgid "Дата и время проведения мероприятия"
+msgstr "Дата і час проведення заходу"
+
+#: customizer/lectors.php:13 customizer/lectors.php:62
+#: parts/home/lectors.php:19
+msgid "Лекторы"
+msgstr "Лектори"
+
+#: customizer/lectors.php:15
+msgid "Секция главной страницы. Якорь #lectors"
+msgstr "Секція головної сторінки. Якір #lectors"
+
+#: customizer/news.php:13 customizer/news.php:63 parts/home/news.php:31
+msgid "Новости"
+msgstr "Новини"
+
+#: customizer/news.php:15
+msgid ""
+"Секция главной страницы. Якорь #news. Новости (посты) берутся из категории."
+msgstr ""
+"Секція головної сторінки. Якір #news. Новини (пости) беруться з категорії."
+
+#: customizer/news.php:52
+msgid "Выбор категории"
+msgstr "Вибір категорії"
+
+#: customizer/news.php:102 parts/home/news.php:33
+msgid "Смотреть все новости"
+msgstr "Дивитися всі новини"
+
+#: customizer/programs.php:13 src/scripts/gutenberg/program.js:10
+msgid "Программа мероприятия"
+msgstr "Програма заходу"
+
+#: customizer/programs.php:15
+msgid ""
+"Секция главной страницы \"Программа\". Якорь #programs. Если у страницы есть "
+"дочерние, то будут сформированы вкладки."
+msgstr ""
+"Секція головної сторінки \"Програма\". Якір #programs. Якщо у сторінки є "
+"дочірні, то будуть сформовані вкладки."
+
+#: customizer/programs.php:62
+msgid "Программа"
+msgstr "Програма"
+
+#: customizer/socials.php:13 src/scripts/gutenberg/person.js:105
+msgid "Социальные сети"
+msgstr "Соціальні мережі"
+
+#: customizer/socials.php:15
+msgid "Список контактов в социальных сетях"
+msgstr "Список контактів в соціальних мережах"
+
+#: customizer/socials.php:22
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: customizer/socials.php:23
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: customizer/socials.php:24
+msgid "Facebook"
+msgstr "Facebook"
+
+#: customizer/socials.php:25
+msgid "Twitter"
+msgstr "Twitter"
+
+#: footer.php:13
+msgid "ЦКТ ПГТУ"
+msgstr "ЦКТ ПДТУ"
+
+#: functions.php:40
+msgid "Настройки темы \"Open Day\""
+msgstr "Налаштування теми \"Open Day\""
+
+#: functions.php:89
+msgid "Главное меню"
+msgstr "Головне меню"
+
+#: functions.php:90
+msgid "Меню страницы 404"
+msgstr "Меню сторінки 404"
+
+#: functions.php:102
+msgid "Сайдбар подвала"
+msgstr "Сайдбар підвалу"
+
+#: functions.php:112
+msgid "Колонка"
+msgstr "Колонка"
+
+#: header.php:28
+msgid "Открыть меню"
+msgstr "Відкрити меню"
+
+#: includes/template-functions.php:68
+msgid "Главная"
+msgstr "Головна"
+
+#: includes/template-functions.php:81
+msgid "Домашняя страница"
+msgstr "Домашня сторінка"
+
+#: includes/template-functions.php:148
+msgid "Смотреть предыдущий пост"
+msgstr "Дивитися попередній пост"
+
+#: includes/template-functions.php:152
+msgid "Смотреть следующий пост"
+msgstr "Наступний пост"
+
+#: parts/nav.php:11
+msgid "Меню"
+msgstr "Меню"
+
+#: src/scripts/gutenberg/clearfix.js:5
+msgid "PSTU Clearfix"
+msgstr "PSTU Clearfix"
+
+#: src/scripts/gutenberg/clearfix.js:6
+msgid ""
+"Используется для решения проблем, возникающих при содержании «плавающих» "
+"элементов в рамках блока контейнера или обтекания элементов"
+msgstr ""
+"Використовується для вирішення проблем, що виникають при утриманні "
+"«плаваючих» елементів в рамках блоку контейнера або обтікання елементів"
+
+#: src/scripts/gutenberg/clearfix.js:8 src/scripts/gutenberg/person.js:13
+#: src/scripts/gutenberg/program.js:12 src/scripts/gutenberg/step.js:13
+#: src/scripts/gutenberg/widget.js:14
+msgid "ПГТУ"
+msgstr "ПДТУ"
+
+#: src/scripts/gutenberg/clearfix.js:9
+msgid "очистка"
+msgstr "очистка"
+
+#: src/scripts/gutenberg/clearfix.js:10
+msgid "ластик"
+msgstr "ластик"
+
+#: src/scripts/gutenberg/clearfix.js:11
+msgid "обтекание"
+msgstr "обтікання"
+
+#: src/scripts/gutenberg/clearfix.js:12
+msgid "изображение"
+msgstr "зображення"
+
+#: src/scripts/gutenberg/clearfix.js:13
+msgid "выравнивание"
+msgstr "вирівнювання"
+
+#: src/scripts/gutenberg/person.js:10
+msgid "Лектор"
+msgstr "Лектор"
+
+#: src/scripts/gutenberg/person.js:14
+msgid "лектор"
+msgstr "лектор"
+
+#: src/scripts/gutenberg/person.js:15 src/scripts/gutenberg/program.js:14
+#: src/scripts/gutenberg/step.js:15
+msgid "список"
+msgstr "список"
+
+#: src/scripts/gutenberg/person.js:16
+msgid "сотрудник"
+msgstr "співробітник"
+
+#: src/scripts/gutenberg/person.js:191 src/scripts/gutenberg/step.js:124
+#: src/scripts/gutenberg/widget.js:74
+msgid "Имя"
+msgstr "Ім'я"
+
+#: src/scripts/gutenberg/program.js:13 src/scripts/gutenberg/step.js:16
+msgid "программа"
+msgstr "програма"
+
+#: src/scripts/gutenberg/program.js:15 src/scripts/gutenberg/widget.js:17
+msgid "меню"
+msgstr "меню"
+
+#: src/scripts/gutenberg/program.js:16
+msgid "пункты"
+msgstr "пункти"
+
+#: src/scripts/gutenberg/program.js:17 src/scripts/gutenberg/widget.js:18
+msgid "контейнер"
+msgstr "контейнер"
+
+#: src/scripts/gutenberg/step.js:10
+msgid "Выступление"
+msgstr "Виступ"
+
+#: src/scripts/gutenberg/step.js:14
+msgid "выступление"
+msgstr "виступ"
+
+#: src/scripts/gutenberg/step.js:17
+msgid "мероприятие"
+msgstr "захід"
+
+#: src/scripts/gutenberg/step.js:115
+msgid "Время проведения"
+msgstr "Час проведення"
+
+#: src/scripts/gutenberg/widget.js:11
+msgid "Виджет"
+msgstr "Віджет"
+
+#: src/scripts/gutenberg/widget.js:15
+msgid "виджет"
+msgstr "віджет"
+
+#: src/scripts/gutenberg/widget.js:16
+msgid "блок"
+msgstr "блок"
+
+#: src/scripts/gutenberg/widget.js:82
+msgid "Список подстраниц"
+msgstr "Список дочірніх сторінок"
+
+#~ msgid "Секция главной страницы. Якорь #error404"
+#~ msgstr "Секція головної сторінки. Якір #error404"

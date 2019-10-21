@@ -12,16 +12,21 @@ $label = get_theme_mod( OPENDAY_SLUG . '_jumbotron_label', __( 'Подробне
 $page_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_jumbotron_page_id', '' ), 'page' );
 $permalink = ( empty( $page_id ) ) ? '' : get_permalink( $page_id );
 $bgi_src = get_theme_mod( OPENDAY_SLUG . '_jumbotron_bgi', OPENDAY_URL . 'images/jumbotron.svg' );
-$timestamp = strtotime( get_theme_mod( OPENDAY_SLUG . '_jumbotron_timestamp', '' ) );
-if ( $timestamp ) {
-  $days = floor( $timestamp / ( 1000*60*60*24 ) );
-  $hours = floor( ( $timestamp - ( $days*1000*60*60*24 ) ) / ( 1000*60*60 ) );
-  $mins = floor( ( $timestamp - ( $days*1000*60*60*24 ) - ( $hours*1000*60*60 ) ) / ( 1000*60 ) );
-  $secs = floor( ( $timestamp - ( $days*1000*60*60*24 ) - ( $hours*1000*60*60 ) - ( $mins*1000*60 ) ) / 1000 );
-  if ( file_exists( OPENDAY_DIR . 'scripts/jumbotron.js' ) ) {
-    wp_enqueue_script( 'openday-main' );
-    wp_add_inline_script( 'openday-main', file_get_contents( OPENDAY_DIR . 'scripts/jumbotron.js' ), 'after' );
-  }
+$timing_of = strtotime( get_theme_mod( OPENDAY_SLUG . '_jumbotron_timestamp', '' ) );
+$current = time();
+$time_left = false;
+$days = 0;
+$hours = 0;
+$mins = 0;
+$secs = 0;
+
+
+if ( $timing_of > $current ) {
+  $time_left = $timing_of - $current;
+  $days = floor( $time_left / OPENDAY_ONE_DAY );
+  $hours = floor( ( $time_left - ( $days * OPENDAY_ONE_DAY ) ) / OPENDAY_ONE_HOUR );
+  $mins = floor( ( $time_left - ( $days * OPENDAY_ONE_DAY ) - ( $hours * OPENDAY_ONE_HOUR ) ) / OPENDAY_ONE_MIN );
+  $secs = floor( $time_left - ( $days * OPENDAY_ONE_DAY ) - ( $hours * OPENDAY_ONE_HOUR ) - ( $mins * OPENDAY_ONE_MIN ) );  
 }
 
 if ( function_exists( 'pll__' ) ) {

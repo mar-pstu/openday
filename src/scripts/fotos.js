@@ -32,6 +32,6 @@ jQuery( document ).ready( function () {
 		afterLoad: GalleryInit,
 	} );
 	jQuery( window ).resize( GalleryInit );
-	jQuery( "#fotos-gallery .link" ).fancybox( {} );
+	jQuery( "#fotos-gallery .item" ).fancybox( {} );
 	GalleryInit();
 } );

@@ -9,6 +9,9 @@ define( 'OPENDAY_DIR', get_template_directory() . '/' );
 define( 'OPENDAY_TEXTDOMAIN', 'openday' );
 define( 'OPENDAY_VERSION', '0.0.1' );
 define( 'OPENDAY_SLUG', 'openday' );
+define( 'OPENDAY_ONE_MIN', 60 );
+define( 'OPENDAY_ONE_HOUR', 60*60 );
+define( 'OPENDAY_ONE_DAY', 60*60*24 );
 
 
 
@@ -47,6 +50,7 @@ if ( is_customize_preview() ) {
 		include get_theme_file_path( 'customizer/fotos.php' );
 		include get_theme_file_path( 'customizer/direction.php' );
 		include get_theme_file_path( 'customizer/404.php' );
+		include get_theme_file_path( 'customizer/socials.php' );
 	} );
 }
 

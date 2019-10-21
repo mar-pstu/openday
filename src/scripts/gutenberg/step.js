@@ -69,26 +69,24 @@
 			var attributes = props.attributes;
 			function onChangeLevel( newLevel ) { props.setAttributes( { level: newLevel } ); }
 			return el( 'div', { className: 'openday-steps__item item' },
-				el( wp.editor.BlockControls, 
-					{ 
-						key: 'controls',
-						controls: [
-							{
-								icon: 'heading',
-								title: 'h3',
-								isActive: props.attributes.level === 'h3',
-								onClick: function() { onChangeLevel( 'h3' ) },
-								subscript: '3',
-							},
-							{
-								icon: 'heading',
-								title: 'h4',
-								isActive: props.attributes.level === 'h4',
-								onClick: function() { onChangeLevel( 'h4' ) },
-								subscript: '4',
-							},
-						]
-					}
+				el( wp.editor.BlockControls, { 
+					key: 'controls',
+					controls: [
+						{
+							icon: 'heading',
+							title: 'h3',
+							isActive: props.attributes.level === 'h3',
+							onClick: function() { onChangeLevel( 'h3' ) },
+							subscript: '3',
+						},
+						{
+							icon: 'heading',
+							title: 'h4',
+							isActive: props.attributes.level === 'h4',
+							onClick: function() { onChangeLevel( 'h4' ) },
+							subscript: '4',
+						},
+					] }
 				),
 				el( MediaUpload, {
 					onSelect: function( media ) {

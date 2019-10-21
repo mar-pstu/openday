@@ -7,7 +7,7 @@
               <p class="footer__copyright copyright"><?php echo date( 'Y' ); ?> &copy; <?php bloginfo( 'name' ); ?></p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 first-xs">
-              <?php echo openday\render_socials_list(); ?>
+              <?php echo openday\render_socials_list( get_theme_mod( OPENDAY_SLUG . '_socials', array() ) ); ?>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <p class="footer__developer developer"><?php _e( 'ЦКТ ПГТУ', OPENDAY_TEXTDOMAIN ); ?></p>

@@ -10,7 +10,7 @@ mixin news_entry( args )
 	.col-xs-12.col-sm-7.col-md-4.col-lg-4: .news__entry.entry
 		.thumbnail
 			a( href="#" ): img.wp-post-thumbnail.lazy( src="#", data-src=args.thumbnail, alt=args.title )
-			time.publish #[span.day 20] #[span.month окт] #[span.year 2019]
+			.publish #[span.day 20] #[span.month окт] #[span.year 2019]
 		h3.title: a( href="#" ) #{args.title}
 		p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nihil fuga tempore enim repellendus mollitia labore maxime, ipsum veritatis, quae eius quibusdam nobis pariatur accusamus iusto temporibus quasi omnis cum!
 		a.btn.btn-warning.permalink( href="#" ) Подробней

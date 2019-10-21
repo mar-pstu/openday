@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.openday-widget {
+
+	margin: 1em auto;
+
+	&__title {
+		margin-bottom: 0;
+		border-bottom: 1px solid $brand-warning;
+		& + p { margin-top: 0; }
+	}
+
+	.excerpt {
+		padding: 0 1em;
+	}
+
+}
