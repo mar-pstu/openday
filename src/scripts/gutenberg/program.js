@@ -26,7 +26,7 @@
 			return el( 'div', { className: 'openday-steps' },
 				el( editor.InnerBlocks, {
 					allowedBlocks: [ 'openday/step' ],
-                	template: [ [ 'openday/step', { 'placeholder': 'Выступление' } ] ],
+					template: [ [ 'openday/step', { 'placeholder': 'Выступление' } ] ],
 				} ),
 			);
 		},

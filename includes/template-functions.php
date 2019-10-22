@@ -122,13 +122,13 @@ function get_translate_id( $id, $type = 'post' ) {
 
 function render_socials_list( $contacts = array() ) {
 	$result = __return_empty_array();
-	if ( ! empty( $contacts ) ) {
+	if ( is_array( $contacts ) && ! empty( $contacts ) ) {
 		foreach ( $contacts as $key => $value ) {
 			if ( ! empty( $value ) ) {
 				$result[] = sprintf(
-					'<li class="%3$s"><a href="%1$s"><span class="sr-only">%2$s</span></a></li>',
-					$value,
-					$key          
+					'<li><a class="%1$s" href="%2$s"><span class="sr-only">%1$s</span></a></li>',
+					$key,
+					$value
 				);
 			}
 		}

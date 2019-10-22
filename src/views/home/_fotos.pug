@@ -5,7 +5,7 @@
 
 
 mixin fotos_item( args )
-	figure.fotos__item.item: a.link( href=args.foto, rel="fotos", title=args.title )
+	a.fotos__item.item( href=args.foto, title=args.title ): figure.overlay
 		img.thumbnail( src=args.thumbnail, alt=args.title )
 		figcapture.title #{args.title}
 

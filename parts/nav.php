@@ -6,6 +6,7 @@
       <span class="sr-only"></span>
     </button>
     <?php echo openday\get_languages_list(); ?>
+    <?php echo openday\render_socials_list( get_theme_mod( OPENDAY_SLUG . '_socials', array() ) ); ?>
     <?php if ( has_nav_menu( 'main' ) ) : ?>
       <h2><?php _e( 'Меню', OPENDAY_TEXTDOMAIN ); ?></h2>
       <?php

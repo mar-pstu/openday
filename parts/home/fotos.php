@@ -12,7 +12,7 @@ if ( is_array( $setting ) && ! empty( $setting ) ) {
     $attachment_id = ( is_numeric( $value ) ) ? sanitize_key( $value ) : attachment_url_to_postid( esc_url_raw( $value ) );
     if ( absint( $attachment_id ) ) {
       $result[] = sprintf(
-        '<figure class="fotos__item item"><a class="link" href="%1$s" rel="fotos"><img class="thumbnail"src="#" data-src="%2$s" alt="%3$s"><figcapture class="title">%3$s</figcapture></a></figure>',
+        '<a class="fotos__item item" href="%1$s" rel="fotos"><figure class="overlay"><img class="thumbnail"src="#" data-src="%2$s" alt="%3$s"><figcapture class="title">%3$s</figcapture></figure></a>',
         wp_get_attachment_image_url( $attachment_id, 'full', false ),
         wp_get_attachment_image_url( $attachment_id, 'midium', false ),
         esc_attr( wp_get_attachment_caption( $attachment_id ) )

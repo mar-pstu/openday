@@ -12,7 +12,7 @@ $wp_customize->add_section(
     array(
         'title'            => __( 'Программа мероприятия', OPENDAY_TEXTDOMAIN ),
         'priority'         => 10,
-        'description'      => __( 'Секция главной страницы "Программа". Якорь #programs. Если с писанием имеет дочерние, то будут сформированы вкладки.', OPENDAY_TEXTDOMAIN ),
+        'description'      => __( 'Секция главной страницы "Программа". Якорь #programs. Если у страницы есть дочерние, то будут сформированы вкладки.', OPENDAY_TEXTDOMAIN ),
         'panel'            => OPENDAY_SLUG
     )
 ); /**/
