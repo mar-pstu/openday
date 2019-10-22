@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 $wp_customize->add_section(
     OPENDAY_SLUG . '_error404',
     array(
-        'title'            => __( 'Как к нам приехать', OPENDAY_TEXTDOMAIN ),
+        'title'            => __( 'Страница ошибки 404', OPENDAY_TEXTDOMAIN ),
         'priority'         => 10,
-        'description'      => __( 'Секция главной страницы. Якорь #error404', OPENDAY_TEXTDOMAIN ),
+        'description'      => __( 'Якорь #error404', OPENDAY_TEXTDOMAIN ),
         'panel'            => OPENDAY_SLUG
     )
 ); /**/
