@@ -95,23 +95,25 @@ function the_breadcrumbs() {
 
 
 function get_translate_id( $id, $type = 'post' ) {
-	$result = '';
-	if ( $id && ! empty( $id ) ) {
-		if ( defined( 'POLYLANG_FILE' ) ) {
-			switch ( $type ) {
-				case 'category':
-					$translate = ( function_exists( 'pll_get_term' ) ) ? pll_get_term( $id, pll_current_language( 'slug' ) ) : $translate;
-					break;
-				case 'post':
-				case 'page':
-				default:
-					$translate = ( function_exists( 'pll_get_post' ) ) ? pll_get_post( $id, pll_current_language( 'slug' ) ) : $translate;
-					break;
-			} // switch
-			$result = ( $translate ) ? $translate : '';
-		} // if defined
-	}
-	return $result;
+    $result = '';
+    if ( $id && ! empty( $id ) ) {
+        if ( defined( 'POLYLANG_FILE' ) ) {
+            switch ( $type ) {
+                case 'category':
+                    $translate = ( function_exists( 'pll_get_term' ) ) ? pll_get_term( $id, pll_current_language( 'slug' ) ) : $translate;
+                    break;
+                case 'post':
+                case 'page':
+                default:
+                    $translate = ( function_exists( 'pll_get_post' ) ) ? pll_get_post( $id, pll_current_language( 'slug' ) ) : $translate;
+                    break;
+            } // switch
+            $result = ( $translate ) ? $translate : '';
+        } else {
+            $result = $id;
+        }
+    }
+    return $result;
 }
 
 
