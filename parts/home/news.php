@@ -51,7 +51,7 @@ if ( $cat && ! is_wp_error( $cat ) ) {
 					<div class="news__entry entry">
 						<div class="thumbnail">
 							<a href="<?php the_permalink( $entry->ID ); ?>">
-								<?php openday\the_thumbnail_image( $entry->ID, 'medium' ); ?>
+								<?php openday\the_thumbnail_image( $entry->ID, 'thumbnail-3x2' ); ?>
 							</a>
 							<?php openday\the_publish_date( strtotime( $entry->post_date ) ); ?>
 						</div>

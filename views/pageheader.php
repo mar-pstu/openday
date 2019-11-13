@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; }; ?>
 <div class="pageheader">
 	<?php if ( $thumbnail_id ) : ?>
 		<a class="fancybox thumbnail" href="<?php echo wp_get_attachment_image_url( $thumbnail_id, 'full', false ); ?>">
@@ -6,3 +7,9 @@
 	<?php endif; ?>
     <h1 class="title"><?php echo $title; ?></h1>
 </div>
+
+<?php if ( ! empty( $excerpt ) ) : ?>
+	<div class="lead">
+		<?php echo $excerpt; ?>
+	</div>
+<?php endif; ?>

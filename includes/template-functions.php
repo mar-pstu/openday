@@ -177,7 +177,7 @@ function the_pager() {
 function the_pageheader() {
 	if ( is_archive() ) {
 		$title = get_the_archive_title();
-		$excerpt = get_the_archive_description();
+		$excerpt = do_shortcode( get_the_archive_description() );
 		$term = get_queried_object();
 		$thumbnail_id = get_term_meta( $term->term_id, OPENDAY_SLUG . '_thumbnail', true );
 	} else {
@@ -244,4 +244,16 @@ function get_categories_choices() {
 		}
 	}
 	return $result;
+}
+
+
+
+
+
+
+function has_sub_menu( $item_id, $items ) {
+	foreach( $items as $item ) {
+		if( $item->menu_item_parent && $item->menu_item_parent == $item_id ) return true;
+	}
+	return false;
 }

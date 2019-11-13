@@ -1,6 +1,9 @@
 <?php
 
 
+if ( ! defined( 'ABSPATH' ) ) { exit; };
+
+
 $page_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_programs_page_id', '' ), 'page' );
 
 

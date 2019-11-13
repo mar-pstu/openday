@@ -7,7 +7,7 @@
 define( 'OPENDAY_URL', get_template_directory_uri() . '/' );
 define( 'OPENDAY_DIR', get_template_directory() . '/' );
 define( 'OPENDAY_TEXTDOMAIN', 'openday' );
-define( 'OPENDAY_VERSION', '0.0.1' );
+define( 'OPENDAY_VERSION', '1.0.4' );
 define( 'OPENDAY_SLUG', 'openday' );
 define( 'OPENDAY_ONE_MIN', 60 );
 define( 'OPENDAY_ONE_HOUR', 60*60 );
@@ -24,9 +24,14 @@ get_template_part( 'includes/gutenberg' );
 
 
 
+
+
 if ( function_exists( 'pll_register_string' ) ) {
 	include get_theme_file_path( 'includes/register-strings.php' );
 }
+
+
+
 
 
 
@@ -65,6 +70,21 @@ function openday_theme_supports() {
 	add_theme_support( 'automatic-feed-links' );
 	add_filter( 'widget_text', 'do_shortcode' );
 	add_post_type_support( 'page', 'excerpt' );
+	add_theme_support( 'automatic-feed-links' );
+	add_image_size( 'thumbnail-3x2', 600, 400, true ); // размер миниатюры 3x2 с жестким кадрированием
+	add_filter( 'image_size_names_choose', function ( $sizes ) {
+		return array_merge( $sizes, array(
+			'thumbnail-3x2' => __( '2x3 жесткое кадрирование', OPENDAY_TEXTDOMAIN ),
+		) );
+	}, 10, 1 );
+
+	add_filter( 'widget_text', 'do_shortcode' );
+	add_filter( 'wp_nav_menu_objects', function ( $items ) {
+		foreach( $items as $item ) {
+			if( openday\has_sub_menu( $item->ID, $items ) ) $item->classes[] = 'has-sub-menu';
+		}
+		return $items;
+	} );
 }
 add_action( 'after_setup_theme', 'openday_theme_supports' );
 

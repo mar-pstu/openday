@@ -692,7 +692,13 @@ img.alignright, a.alignright img {
     transition: opacity .2s; }
 
 .pager {
-  margin: 25px 0px; }
+  margin: 25px 0px;
+  clear: both; }
+  .pager:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both; }
   .pager .item {
     text-decoration: none;
     display: flex;
@@ -808,7 +814,8 @@ form label {
 form textarea,
 form input[type="text"],
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="tel"] {
   display: block;
   border: 1px solid #4d407c;
   margin-top: 0.5em;
@@ -818,7 +825,7 @@ form input[type="password"] {
   outline: none;
   background-color: #fff;
   padding: 1em 2em;
-  border: none;
+  border: 1px solid #8c7fbd;
   transition: box-shadow .2s; }
   form textarea:active, form textarea:focus,
   form input[type="text"]:active,
@@ -826,7 +833,9 @@ form input[type="password"] {
   form input[type="email"]:active,
   form input[type="email"]:focus,
   form input[type="password"]:active,
-  form input[type="password"]:focus {
+  form input[type="password"]:focus,
+  form input[type="tel"]:active,
+  form input[type="tel"]:focus {
     box-shadow: 0 1em 4em rgba(0, 0, 0, 0.2); }
 
 form textarea {
@@ -1145,7 +1154,8 @@ form textarea {
   display: block;
   width: 100% !important;
   min-height: 320px !important;
-  margin: 2em 0; }
+  margin: 2em 0;
+  border: none; }
 
 .archive .entry {
   margin: 2em auto; }

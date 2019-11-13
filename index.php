@@ -1,4 +1,16 @@
-<?php get_header(); ?>
+<?php
+
+
+namespace openday;
+
+
+if ( ! defined( 'ABSPATH' ) ) { exit; };
+
+
+get_header();
+
+
+?>
 
 <div class="container">
 	<div class="row">
@@ -6,6 +18,9 @@
 		<div class="col-xs-12 col-sm-12 <?php echo ( is_active_sidebar( 'column' ) ) ? 'col-md-8 col-lg-8' : 'col-md-12 col-lg-12'; ?>">
 
 			<?php
+
+				the_pageheader();
+				the_breadcrumbs();
 
 				if ( is_singular() ) {
 					get_template_part( 'parts/singular' );

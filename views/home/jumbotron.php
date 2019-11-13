@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; }; ?>
 <div class="jumbotron lazy" id="jumbotron" data-src="<?php echo esc_attr( $bgi_src ); ?>">
 	<div class="container">
 		<div class="row center-xs middle-xs">
@@ -17,7 +18,7 @@
 						<span class="month"><?php echo date_i18n( 'M', $timing_of ); ?></span>
 						<span class="year"><?php echo date( 'Y', $timing_of ); ?></span>
 					</time>
-					<div class="counter" id="counter" data-timing-of="<?php echo $timing_of; ?>">
+					<div class="counter" id="counter" data-timing-of="<?php echo ( $timing_of * 1000 ); ?>">
 						<div class="param days" id="days">
 							<div class="value"><?php echo $days; ?></div>
 							<div class="label">Days</div>

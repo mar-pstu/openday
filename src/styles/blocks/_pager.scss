@@ -5,6 +5,13 @@
 .pager {
 
 	margin: 25px 0px;
+	clear: both;
+	&:after {
+		content: '';
+		display: table;
+		width: 100%;
+		clear: both;
+	}
 
 	.item {
 		@include td ( none, none );

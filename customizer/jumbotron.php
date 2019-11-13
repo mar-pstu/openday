@@ -42,7 +42,7 @@ $wp_customize->add_setting(
     array(
         'default'           => '',
         'transport'         => 'reset',
-        'sanitize_callback' => 'intval',
+        'sanitize_callback' => 'sanitize_key',
     )
 );
 $wp_customize->add_control(

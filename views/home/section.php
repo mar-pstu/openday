@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; }; ?>
 <section class="section <?php echo $name; ?>" id="<?php echo $name; ?>">
   <div class="container">
     <?php if ( ! empty( $title ) ) : ?><div class="text-center"><h2><?php echo $title; ?></h2></div><?php endif; ?>

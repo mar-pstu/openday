@@ -1,6 +1,10 @@
 <?php
 
 
+
+if ( ! defined( 'ABSPATH' ) ) { exit; };
+
+
 $setting = get_theme_mod( OPENDAY_SLUG . '_fotos', array() );
 
 

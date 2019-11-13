@@ -98,6 +98,9 @@ jQuery( document ).ready( function () {
 
 
 
+
+
+
 jQuery( document ).ready( function () {
 	var $container = jQuery( '#counter' );
 	if ( $container.length > 0 ) {
@@ -146,4 +149,16 @@ jQuery( document ).ready( function () {
 			$tabs.filter( jQuery( this ).attr( 'href' ) ).addClass( 'active' );
 		} )
 	}
+} );
+
+
+
+
+
+
+
+jQuery( document ).ready( function () {
+	jQuery( '.lazy' ).lazy();
+	jQuery( '.fancybox' ).fancybox();
+	jQuery( '.wp-block-gallery .blocks-gallery-item img' ).closest( 'a' ).fancybox();
 } );
