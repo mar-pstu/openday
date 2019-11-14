@@ -31,6 +31,7 @@ if ( $cat && ! is_wp_error( $cat ) ) {
 		$title = get_theme_mod( OPENDAY_SLUG . '_news_title', __( 'Новости', OPENDAY_TEXTDOMAIN ) );
 		$description = get_theme_mod( OPENDAY_SLUG . '_news_description', '' );
 		$label = get_theme_mod( OPENDAY_SLUG . '_news_label', __( 'Смотреть все новости', OPENDAY_TEXTDOMAIN ) );
+		$name = 'news';
 
 		if ( function_exists( 'pll__' ) ) {
 		  $title = pll__( $title );
@@ -82,50 +83,3 @@ if ( $cat && ! is_wp_error( $cat ) ) {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-// $cat_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_news_cat_id', '' ), 'cat' );
-
-// $cat = get_category( $cat_id, OBJECT, 'raw' );
-
-// if ( $cat && ! is_wp_error( $cat ) ) {
-
-//   $entries = get_post( array(
-//     'numberposts' => 3,
-//     'cat'    => $cat->term_id,
-//     'orderby'     => 'date',
-//     'order'       => 'DESC',
-//     'post_type'   => 'post',
-//     'suppress_filters' => true,
-//   ), OBJECT, 'raw' );
-
-//   if ( is_array( $entries ) && ! empty( $entries ) ) {
-
-//     $permalink = get_cat_link( $cat->term_id );
-//     $title = get_theme_mod( OPENDAY_SLUG . '_news_title', __( 'Новости', OPENDAY_TEXTDOMAIN ) );
-//     $description = get_theme_mod( OPENDAY_SLUG . '_news_description', '' );
-//     $label = get_theme_mod( OPENDAY_SLUG . '_news_label', __( 'Смотреть все новости', OPENDAY_TEXTDOMAIN ) );
-
-//     if ( function_exists( 'pll__' ) ) {
-//       $title = pll__( $title );
-//       $description = pll__( $description );
-//       $label = pll__( $label );
-//     }
-
-//     if ( empty( $title ) ) $title = strip_tags( apply_filters( 'single_cat_title', $cat->name ) );
-//     if ( empty( $description ) ) $description = strip_tags( 'category_description' );
-
-//     include get_theme_file_path( 'views/home/news.php' );
-
-//   }
-
-// }

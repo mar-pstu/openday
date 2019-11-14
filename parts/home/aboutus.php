@@ -10,7 +10,8 @@ $page_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_aboutus_pag
 $permalink = '';
 $title = get_theme_mod( OPENDAY_SLUG . '_aboutus_title', '' );
 $excerpt = get_theme_mod( OPENDAY_SLUG . '_aboutus_excerpt', '' );
-$thumbnail = get_theme_mod( OPENDAY_SLUG . '_aboutus_thumbnail', '' );
+$thumbnail = __return_empty_string();
+$thumbnail_id = attachment_url_to_postid( esc_url_raw( get_theme_mod( OPENDAY_SLUG . '_aboutus_thumbnail', '' ) ) );
 $label = get_theme_mod( OPENDAY_SLUG . '_aboutus_label', __( 'Подробней', OPENDAY_TEXTDOMAIN ) );
 
 
@@ -18,6 +19,11 @@ if ( function_exists( 'pll__' ) ) {
 	$title = pll__( $title );
 	$excerpt = pll__( $excerpt );
 	$label = pll__( $label );
+}
+
+
+if ( absint( $thumbnail_id ) ) {
+	$thumbnail = ( wp_is_mobile() ) ? wp_get_attachment_image_url( $thumbnail_id, 'medium', false ) : wp_get_attachment_image_url( $thumbnail_id, 'large', false );
 }
 
 

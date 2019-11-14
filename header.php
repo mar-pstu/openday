@@ -12,7 +12,7 @@
                 <?php the_custom_logo(); ?>
                 <?php if ( is_multisite() ) : ?>
                   <?php switch_to_blog( get_main_site_id() ); ?>
-                  <a class="network" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'description' ); ?></a>
+                  <a class="network" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
                   <span class="separator"></span>
                   <?php restore_current_blog(); ?>
                 <?php endif; ?>

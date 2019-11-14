@@ -38,14 +38,13 @@ function get_languages_list() {
 			'force_home'         => 0,
 			'echo'               => 0,
 			'hide_if_no_translation' => 0,
-			'hide_current'       => 1,
+			'hide_current'       => 0,
 			'post_id'            => ( is_singular() ) ? get_the_ID() : NULL,
 			'raw'                => 1,
 		) );
 		if ( ( $other ) && ( ! empty( $other ) ) ) {
-			$result[] = '<li class="current">' . $current . '</li>';
 			foreach ( $other as $lang ) $result[] = sprintf(
-				'<li><a href="%1$s">%2$s</a></li>',
+				( $current == $lang[ 'name' ] ) ? '<li class="current">%2$s</li>' : '<li><a href="%1$s">%2$s</a></li>',
 				$lang[ 'url' ],
 				$lang[ 'name' ]
 			);

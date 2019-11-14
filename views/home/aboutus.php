@@ -11,7 +11,7 @@
         <?php if ( ! empty( trim( $title ) ) ) : ?><div class="text-left"><h2><?php echo $title; ?></h2></div><?php endif; ?>
         <?php if ( ! empty( trim( $excerpt ) ) ) : ?><div class="excerpt"><?php echo $excerpt; ?></div><?php endif; ?>
         <?php if ( ! empty( $permalink ) ) : ?>
-          <a class="btn btn-default" href="<?php echo esc_attr( $permalink ); ?>"><?php echo $label; ?></a>
+          <a class="btn btn-default permalink" href="<?php echo esc_attr( $permalink ); ?>"><?php echo $label; ?></a>
         <?php endif; ?>
       </div>
     </div>

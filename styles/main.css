@@ -852,6 +852,8 @@ form textarea {
     max-width: 640px;
     margin-left: auto;
     margin-right: auto; }
+  .section .permalink {
+    margin-top: 1em; }
 
 .breadcrumbs {
   margin: 1em 0;
@@ -1137,7 +1139,8 @@ form textarea {
     max-width: 30em; }
   .news__entry .thumbnail {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: .5em; }
   .news__entry .thumbnail a {
     display: block; }
   .news__entry .wp-post-thumbnail {

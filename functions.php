@@ -7,7 +7,7 @@
 define( 'OPENDAY_URL', get_template_directory_uri() . '/' );
 define( 'OPENDAY_DIR', get_template_directory() . '/' );
 define( 'OPENDAY_TEXTDOMAIN', 'openday' );
-define( 'OPENDAY_VERSION', '1.0.4' );
+define( 'OPENDAY_VERSION', '1.0.5' );
 define( 'OPENDAY_SLUG', 'openday' );
 define( 'OPENDAY_ONE_MIN', 60 );
 define( 'OPENDAY_ONE_HOUR', 60*60 );
