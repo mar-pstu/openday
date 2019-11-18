@@ -18,10 +18,13 @@ form {
 		display: block;
 		font-weight: bold;
 		margin-top: 0.5em;
+		cursor: pointer;
 	}
 
+	select,
 	textarea,
 	input[ type="text" ],
+	input[ type="date" ],
 	input[ type="email" ],
 	input[ type="password" ],
 	input[ type="tel" ] {
@@ -41,6 +44,30 @@ form {
 			box-shadow: $box-shadow;
 		}
 	}
+
+
+	input[ type="file" ] {
+		@extend %button;
+		@extend %button-primary;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+
+	input[ type="date" ],
+	select {
+		appearance: none;
+		background-position-x: 99%;
+		background-position-y: center;
+		background-size: 1em 1em;
+		background-repeat: no-repeat;
+	}
+
+
+	select { @extend %icon-select-arrow; }
+
+
+	input[ type="date" ] { @extend %icon-control-calendar; }
 
 
 	textarea {

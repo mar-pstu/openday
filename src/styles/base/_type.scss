@@ -30,6 +30,15 @@
 .text-right { text-align: right; }
 .text-justify { text-align: justify; }
 
+
+
+.text-primary { color: $brand-primary; }
+.text-success { color: $brand-success; }
+.text-warning { color: $brand-warning; }
+.text-info { color: $brand-info; }
+
+
+
 .display-inline {	display: inline-block; }
 
 .pull-left, .alignleft { float: left; }
