@@ -198,6 +198,9 @@ section,
 summary {
   display: block; }
 
+figcaption {
+  text-align: center; }
+
 audio,
 canvas,
 progress,

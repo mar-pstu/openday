@@ -11,10 +11,8 @@
               <div class="bloginfo">
                 <?php the_custom_logo(); ?>
                 <?php if ( is_multisite() ) : ?>
-                  <?php switch_to_blog( get_main_site_id() ); ?>
-                  <a class="network" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
+                  <a class="network" href="<?php echo home_url( '/' ); ?>"><?php echo get_blog_details( get_main_site_id() )->blogname; ?></a>
                   <span class="separator"></span>
-                  <?php restore_current_blog(); ?>
                 <?php endif; ?>
                 <a class="name" href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a>
               </div>

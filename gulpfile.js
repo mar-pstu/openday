@@ -65,7 +65,7 @@ gulp.task( 'packsrc', function() {
 
 gulp.task( 'packproject', function() {
 	return gulp.src( [ './*', '!./node_modules', '!./images', '!./styles', '!./scripts', '!./fonts', '!./video', '!./examples' ] )
-		.pipe( zip( 'dumdj-project.zip' ) )
+		.pipe( zip( 'openday.zip' ) )
 		.pipe( gulp.dest( '../') );
 	}
 );

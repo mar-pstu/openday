@@ -104,6 +104,7 @@
 				source: 'attribute',
 				selector: '.foto img',
 				attribute: 'data-src',
+				default: '',
 			},
 			link: {
 				type: 'string',
@@ -294,10 +295,10 @@
 							el( 'a', { href: props.attributes.linkedin, className: 'linkedin' } ), el( 'span', { className: 'sr-only' }, 'LinkedIn' ) ),
 					)
 				),
-				( props.attributes.excerpt.length > 0 ) && el( RichText.Content, {
+				( props.attributes.title.length > 0 ) && el( RichText.Content, {
 					tagName: 'p',
-					className: 'excerpt',
-					value: props.attributes.excerpt
+					value: props.attributes.excerpt,
+					className: 'excerpt'
 				} ),
 				( props.attributes.link.length > 0 ) && el( RichText.Content, {
 					tagName: 'a',

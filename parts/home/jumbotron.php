@@ -20,6 +20,10 @@ $hours = 0;
 $mins = 0;
 $secs = 0;
 
+if ( empty( $bgi_src ) ) {
+	$bgi_src = OPENDAY_URL . 'images/jumbotron.svg';
+}
+
 
 if ( $timing_of > $current ) {
   $time_left = $timing_of - $current;

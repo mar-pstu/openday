@@ -31,7 +31,7 @@ if ( ! empty( $page_id ) ) {
 		if ( empty( $description ) ) $description = esc_html( $parent->post_excerpt );
 
 		$days = get_pages( array(
-			'sort_order'   => 'ASC',
+			'sort_order'   => 'DESC',
 			'sort_column'  => 'post_title',
 			'parent'       => ( int ) $parent->ID,
 			'post_type'    => 'page',
@@ -45,7 +45,7 @@ if ( ! empty( $page_id ) ) {
 					'<li><a href="#tab-content-%1$s"><div class="title">%2$s</div><div class="excerpt">%3$s</div></a></li>',
 					$day->ID,
 					strip_tags( $day->post_title ),
-					( empty( $day->post_excerpt ) ) ? '' : strip_tags( $day )
+					( empty( trim( $day->post_excerpt ) ) ) ? '' : strip_tags( $day->post_excerpt )
 				);
 				$tabs[] = sprintf(
 					'<article class="tab" id="tab-content-%1$s"><h3>%2$s</h3> %3$s</article>',

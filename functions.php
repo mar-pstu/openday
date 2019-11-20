@@ -7,7 +7,7 @@
 define( 'OPENDAY_URL', get_template_directory_uri() . '/' );
 define( 'OPENDAY_DIR', get_template_directory() . '/' );
 define( 'OPENDAY_TEXTDOMAIN', 'openday' );
-define( 'OPENDAY_VERSION', '1.0.7' );
+define( 'OPENDAY_VERSION', '1.0.8' );
 define( 'OPENDAY_SLUG', 'openday' );
 define( 'OPENDAY_ONE_MIN', 60 );
 define( 'OPENDAY_ONE_HOUR', 60*60 );
@@ -66,6 +66,22 @@ if ( is_customize_preview() ) {
 function openday_theme_supports() {
 	add_theme_support( 'menus' );
 	add_theme_support( 'custom-logo' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'custom-header', array(
+		'default-image'          => false,
+		'random-default'         => false,
+		'flex-height'            => true,
+		'flex-width'             => true,
+		'default-text-color'     => 'ffffff',
+		'header-text'            => true,
+		'uploads'                => false,
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+		'video'                  => false, // с 4.7
+		'video-active-callback'  => false, // с 4.7
+	) );
+	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
 	add_filter( 'widget_text', 'do_shortcode' );
