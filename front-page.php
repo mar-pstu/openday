@@ -4,6 +4,8 @@
 get_header();
 
 
+echo "</div>"; // закрытие .container
+
 
 foreach ( array(
     'jumbotron',
@@ -19,5 +21,8 @@ foreach ( array(
 }
 
 
+echo "<div class=\"container\">"; // для открытия .container
+
 
 get_footer();
+

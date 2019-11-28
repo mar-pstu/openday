@@ -30,3 +30,4 @@
         </div>
       </header>
       <main class="wrapper__item wrapper__item--main main" id="main">
+        <div class="container">

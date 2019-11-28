@@ -1,3 +1,4 @@
+        </div>
       </main>
       <?php if ( is_active_sidebar( 'basement' ) ) get_sidebar(); ?>
       <footer class="wrapper__item wrapper__item--footer footer">
