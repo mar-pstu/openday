@@ -1,3 +1,5 @@
 node_modules/
 examples/
 styles/*.map
+styles/main.min.css
+styles/main.css
