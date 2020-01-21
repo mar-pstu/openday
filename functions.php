@@ -141,7 +141,7 @@ function openday_register_sidebars() {
 		'class'            => '',
 		'before_widget'    => '<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"><div id="%1$s" class="widget %2$s">',
 		'after_widget'     => '</div></div>',
-		'before_title'     => '<h3 class="widget__title">',
+		'before_title'     => '<h3 class="widget__title title">',
 		'after_title'      => '</h3>',
 	) );
 	register_sidebar( array(
@@ -151,7 +151,7 @@ function openday_register_sidebars() {
 		'class'            => '',
 		'before_widget'    => '<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12"><div id="%1$s" class="widget %2$s">',
 		'after_widget'     => '</div></div>',
-		'before_title'     => '<h3 class="widget__title">',
+		'before_title'     => '<h3 class="widget__title title">',
 		'after_title'      => '</h3>',
 	) );
 }

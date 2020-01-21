@@ -19,9 +19,12 @@
 			margin: .5em auto;
 			box-shadow: $box-shadow;
 			position: relative;
+			max-width: 30em;
 		}
 		.thumbnail img {
 			display: block;
+			width: 100%;
+			height: auto;
 		}
 		.title {
 			margin: 0;
