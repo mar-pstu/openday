@@ -120,6 +120,7 @@ add_action( 'after_setup_theme', 'openday_load_textdomain' );
 
 
 
+
 function openday_register_nav_menus() {
 	register_nav_menus( array(
 		'main'      => __( 'Главное меню', OPENDAY_TEXTDOMAIN ),
@@ -127,6 +128,7 @@ function openday_register_nav_menus() {
 	) );
 }
 add_action( 'after_setup_theme', 'openday_register_nav_menus' );
+
 
 
 
