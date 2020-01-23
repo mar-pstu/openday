@@ -34,4 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 			</div>
 		</div>
 	<?php endwhile; ?>
+	<?php
+		the_posts_pagination();
+	?>
 <?php endif; ?>

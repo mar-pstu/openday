@@ -76,12 +76,36 @@ $wp_customize->add_control(
 
 
 
+$wp_customize->add_setting(
+    OPENDAY_SLUG . '_fotos_number',
+    array(
+        'default'           => 10,
+        'transport'         => 'reset',
+        'sanitize_callback' => 'absint',
+    )
+);
+$wp_customize->add_control(
+    OPENDAY_SLUG . '_fotos_number',
+    array(
+        'section'           => OPENDAY_SLUG . '_fotos',
+        'label'             => __( 'Количество фото', OPENDAY_TEXTDOMAIN ),
+        'type'              => 'number',
+        'input_attrs'       => array(
+            'min'             => 1,
+            'max'             => 50,
+        ),
+    )
+); /**/
+
+
+
+
 
 if ( class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
     $wp_customize->add_setting(
         OPENDAY_SLUG . '_fotos',
         array(
-            'default'           => array(),
+            'default'           => __return_empty_array(),
             'transport'         => 'reset',
             'sanitize_callback' => 'wp_parse_id_list',
         )
@@ -97,7 +121,7 @@ if ( class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
         )
     ) );
 } else {
-    for ( $i = 0; $i < 10; $i++ ) { 
+    for ( $i = 0; $i < get_theme_mod( OPENDAY_SLUG . '_fotos_number', 10 ); $i++ ) { 
         $wp_customize->add_setting(
             OPENDAY_SLUG . "_fotos[{$i}]",
             array(
