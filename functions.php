@@ -37,26 +37,7 @@ if ( function_exists( 'pll_register_string' ) ) {
 
 
 if ( is_customize_preview() ) {
-	add_action( 'customize_register', function ( $wp_customize ) {
-		$wp_customize->add_panel(
-			OPENDAY_SLUG,
-			array(
-				'capability'      => 'edit_theme_options',
-				'title'           => __( 'Настройки темы "Open Day"', OPENDAY_TEXTDOMAIN ),
-				'priority'        => 200
-			)
-		);
-		include get_theme_file_path( 'customizer/jumbotron.php' );
-		include get_theme_file_path( 'customizer/aboutus.php' );
-		include get_theme_file_path( 'customizer/lectors.php' );
-		include get_theme_file_path( 'customizer/programs.php' );
-		include get_theme_file_path( 'customizer/fotos.php' );
-		include get_theme_file_path( 'customizer/news.php' );
-		include get_theme_file_path( 'customizer/fotos.php' );
-		include get_theme_file_path( 'customizer/direction.php' );
-		include get_theme_file_path( 'customizer/404.php' );
-		include get_theme_file_path( 'customizer/socials.php' );
-	} );
+	include get_theme_file_path( 'includes/customizer.php' );
 }
 
 

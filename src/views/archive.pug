@@ -14,9 +14,11 @@ mixin archive_entry( args )
 				img.lazy.wp-post-thumbnail( src="#", data-src=args.thumbnail, alt=args.title )
 				time.publish #[span.day 20] #[span.month окт] #[span.year 2019]
 		.col-xs-12.col-sm-8.col-md-8.col-lg-9
-			h3.title #{args.title}
+			h3.title: a( href="#" ) #{args.title}
 			p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam, omnis perspiciatis reprehenderit temporibus sint porro libero? Id aut nam animi eveniet perferendis repudiandae aperiam, mollitia expedita officia consectetur laboriosam.
-			p.text-right: a.permalink.btn.btn-primary( href="#" ) Подробней
+			p.text-right
+				a.comments( href="#comments" ) #[span.sr-only Оставлено комментариев] 5
+				a.permalink.btn.btn-primary( href="#" ) Подробней
 
 
 

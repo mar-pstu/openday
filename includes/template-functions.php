@@ -182,7 +182,14 @@ function the_pageheader() {
 	} else {
 		$title = get_the_title();
 		$excerpt = ( has_excerpt( get_the_ID() ) ) ? get_the_excerpt( get_the_ID() ) : false;
-		$thumbnail_id = ( has_post_thumbnail( get_the_ID() ) ) ? get_post_thumbnail_id( get_the_ID() ) : false;
+		$thumbnail_id = __return_empty_string();
+		$thumbnail_flag = __return_true();
+		if ( is_single() ) {
+			$thumbnail_flag = get_theme_mod( OPENDAY_SLUG . '_single_thumbnail_flag', true );
+		}
+		if ( $thumbnail_flag ) {
+			$thumbnail_id = ( has_post_thumbnail( get_the_ID() ) ) ? get_post_thumbnail_id( get_the_ID() ) : false;
+		}
 	}
 	include get_theme_file_path( 'views/pageheader.php' );
 }

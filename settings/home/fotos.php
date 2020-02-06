@@ -8,19 +8,19 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 
 
 $wp_customize->add_section(
-    OPENDAY_SLUG . '_fotos',
+    "{$slug}_fotos",
     array(
         'title'            => __( 'Фото', OPENDAY_TEXTDOMAIN ),
         'priority'         => 10,
         'description'      => __( 'Секция главной страницы. Якорь #fotos', OPENDAY_TEXTDOMAIN ),
-        'panel'            => OPENDAY_SLUG
+        'panel'            => "{$slug}_home",
     )
 ); /**/
 
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_fotos_flag',
+    "{$slug}_fotos_flag",
     array(
         'default'           => false,
         'transport'         => 'reset',
@@ -28,9 +28,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_fotos_flag',
+    "{$slug}_fotos_flag",
     array(
-        'section'           => OPENDAY_SLUG . '_fotos',
+        'section'           => "{$slug}_fotos",
         'label'             => __( 'Использовать секцию', OPENDAY_TEXTDOMAIN ),
         'type'              => 'checkbox',
     )
@@ -38,7 +38,7 @@ $wp_customize->add_control(
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_fotos_title',
+    "{$slug}_fotos_title",
     array(
         'default'           => __( 'Галерея', OPENDAY_TEXTDOMAIN ),
         'transport'         => 'reset',
@@ -46,9 +46,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_fotos_title',
+    "{$slug}_fotos_title",
     array(
-        'section'           => OPENDAY_SLUG . '_fotos',
+        'section'           => "{$slug}_fotos",
         'label'             => __( 'Заголовок', OPENDAY_TEXTDOMAIN ),
         'type'              => 'text',
     )
@@ -57,7 +57,7 @@ $wp_customize->add_control(
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_fotos_description',
+    "{$slug}_fotos_description",
     array(
         'default'           => '',
         'transport'         => 'reset',
@@ -65,9 +65,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_fotos_description',
+    "{$slug}_fotos_description",
     array(
-        'section'           => OPENDAY_SLUG . '_fotos',
+        'section'           => "{$slug}_fotos",
         'label'             => __( 'Подзаголовок', OPENDAY_TEXTDOMAIN ),
         'type'              => 'textarea',
     )
@@ -77,7 +77,7 @@ $wp_customize->add_control(
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_fotos_number',
+    "{$slug}_fotos_number",
     array(
         'default'           => 10,
         'transport'         => 'reset',
@@ -85,9 +85,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_fotos_number',
+    "{$slug}_fotos_number",
     array(
-        'section'           => OPENDAY_SLUG . '_fotos',
+        'section'           => "{$slug}_fotos",
         'label'             => __( 'Количество фото', OPENDAY_TEXTDOMAIN ),
         'type'              => 'number',
         'input_attrs'       => array(
@@ -103,7 +103,7 @@ $wp_customize->add_control(
 
 if ( class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
     $wp_customize->add_setting(
-        OPENDAY_SLUG . '_fotos',
+        "{$slug}_fotos",
         array(
             'default'           => __return_empty_array(),
             'transport'         => 'reset',
@@ -112,18 +112,18 @@ if ( class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
     );
     $wp_customize->add_control( new CustomizeImageGalleryControl\Control(
         $wp_customize,
-        OPENDAY_SLUG . '_fotos',
+        "{$slug}_fotos",
         array(
             'label'          => __( 'Фото', OPENDAY_TEXTDOMAIN ),
-            'section'        => OPENDAY_SLUG . '_fotos',
-            'settings'       => OPENDAY_SLUG . '_fotos',
+            'section'        => "{$slug}_fotos",
+            'settings'       => "{$slug}_fotos",
             'type'           => 'image_gallery',
         )
     ) );
 } else {
-    for ( $i = 0; $i < get_theme_mod( OPENDAY_SLUG . '_fotos_number', 10 ); $i++ ) { 
+    for ( $i = 0; $i < get_theme_mod( "{$slug}_fotos_number", 10 ); $i++ ) { 
         $wp_customize->add_setting(
-            OPENDAY_SLUG . "_fotos[{$i}]",
+            "{$slug}_fotos[{$i}]",
             array(
                 'default'           => '',
                 'transport'         => 'reset',
@@ -133,11 +133,11 @@ if ( class_exists( 'CustomizeImageGalleryControl\Control' ) ) {
         $wp_customize->add_control(
            new WP_Customize_Image_Control(
                $wp_customize,
-               OPENDAY_SLUG . "_fotos[{$i}]",
+               "{$slug}_fotos[{$i}]",
                array(
-                   'label'         => __( 'Фото', OPENDAY_TEXTDOMAIN ) . ' ' . ( $i + 1 ),
-                   'section'       => OPENDAY_SLUG . '_fotos',
-                   'settings'      => OPENDAY_SLUG . "_fotos[{$i}]",
+                   'label'         => sprintf( __( 'Фото %d', OPENDAY_TEXTDOMAIN ), ( $i + 1 ) ),
+                   'section'       => "{$slug}_fotos",
+                   'settings'      => "{$slug}_fotos[{$i}]",
                )
            )
         );

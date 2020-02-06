@@ -8,19 +8,19 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 
 
 $wp_customize->add_section(
-    OPENDAY_SLUG . '_error404',
+    "{$slug}_error404",
     array(
         'title'            => __( 'Страница ошибки 404', OPENDAY_TEXTDOMAIN ),
         'priority'         => 10,
         'description'      => __( 'Якорь #error404', OPENDAY_TEXTDOMAIN ),
-        'panel'            => OPENDAY_SLUG
+        'panel'            => "{$slug}_pages",
     )
 ); /**/
 
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_error404_title',
+    "{$slug}_error404_title",
     array(
         'default'           => __( 'Ошибка 404', OPENDAY_TEXTDOMAIN ),
         'transport'         => 'reset',
@@ -28,9 +28,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_error404_title',
+    "{$slug}_error404_title",
     array(
-        'section'           => OPENDAY_SLUG . '_error404',
+        'section'           => "{$slug}_error404",
         'label'             => __( 'Заголовок', OPENDAY_TEXTDOMAIN ),
         'type'              => 'text',
     )
@@ -39,7 +39,7 @@ $wp_customize->add_control(
 
 
 $wp_customize->add_setting(
-    OPENDAY_SLUG . '_error404_description',
+    "{$slug}_error404_description",
     array(
         'default'           => '',
         'transport'         => 'reset',
@@ -47,9 +47,9 @@ $wp_customize->add_setting(
     )
 );
 $wp_customize->add_control(
-    OPENDAY_SLUG . '_error404_description',
+    "{$slug}_error404_description",
     array(
-        'section'           => OPENDAY_SLUG . '_error404',
+        'section'           => "{$slug}_error404",
         'label'             => __( 'Подзаголовок', OPENDAY_TEXTDOMAIN ),
         'type'              => 'textarea',
     )
