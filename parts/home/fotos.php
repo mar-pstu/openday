@@ -16,11 +16,13 @@ if ( is_array( $fotos ) && ! empty( $fotos ) ) {
 		if ( isset( $fotos[ $i ] ) && ! empty( $fotos[ $i ] ) ) {
 			$attachment_id = ( is_numeric( $fotos[ $i ] ) ) ? sanitize_key( $fotos[ $i ] ) : attachment_url_to_postid( esc_url_raw( $fotos[ $i ] ) );
 			if ( absint( $attachment_id ) ) {
+				$caption = wp_get_attachment_caption( $attachment_id );
 				$result[] = sprintf(
-					'<a class="fotos__item item" href="%1$s" rel="fotos"><figure class="overlay"><img class="thumbnail"src="#" data-src="%2$s" alt="%3$s"><figcapture class="title">%3$s</figcapture></figure></a>',
+					'<a class="fotos__item item" href="%1$s" rel="fotos"><figure class="overlay"><img class="thumbnail"src="#" data-src="%2$s" alt="%3$s">%4$s</figure></a>',
 					wp_get_attachment_image_url( $attachment_id, 'full', false ),
 					wp_get_attachment_image_url( $attachment_id, 'medium', false ),
-					esc_attr( wp_get_attachment_caption( $attachment_id ) )
+					esc_attr( $caption ),
+					( empty( $caption ) ) ? '' : '<figcapture class="title">' . $caption . '</figcapture>'
 				);
 			}
 		}
