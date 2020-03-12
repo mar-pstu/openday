@@ -15,6 +15,8 @@ mixin archive_entry( args )
 				time.publish #[span.day 20] #[span.month окт] #[span.year 2019]
 		.col-xs-12.col-sm-8.col-md-8.col-lg-9
 			h3.title: a( href="#" ) #{args.title}
+			- var url = args.share;
+			include blocks/_share
 			p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam, omnis perspiciatis reprehenderit temporibus sint porro libero? Id aut nam animi eveniet perferendis repudiandae aperiam, mollitia expedita officia consectetur laboriosam.
 			p.text-right
 				a.comments( href="#comments" ) #[span.sr-only Оставлено комментариев] 5
@@ -26,15 +28,17 @@ block main
 	.container: .row
 		.col-xs-12.col-sm-12.col-md-8.col-lg-8
 			include blocks/_pageheader
-			include blocks/_breadcrumb
-			+archive_entry( { thumbnail: src.img+'fotos/medium-04.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, eius, inventore! Qui, q ab, laudantium.' } )
-			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
-			+archive_entry( { thumbnail: src.img+'fotos/medium-03.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
-			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
-			+archive_entry( { thumbnail: src.img+'fotos/medium-05.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis amet, mollitia ' } )
-			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam, voluptates auugit quos delectus!' } )
-			+archive_entry( { thumbnail: src.img+'fotos/medium-06.jpg', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quo praesentium aperi' } )
-			+archive_entry( { thumbnail: src.img+'thumbnail.png', title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat omnis vero voluptate repesse ea!' } )
+			.row
+				.col-xs-12.col-sm-6: include blocks/_breadcrumb
+				.col-xs-12.col-sm-6: include blocks/_share
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/matviyenko-petro-gerasymovych/', thumbnail: src.img+'fotos/medium-04.jpg', title: 'Матвієнко Петро Герасимович' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/belyavczeva-mariya-dmytrivna/', thumbnail: src.img+'thumbnail.png', title: 'Белявцева Марія Дмитрівна' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/gejzer-galyna-konstantynivna/', thumbnail: src.img+'fotos/medium-03.jpg', title: 'Гейзер Галина Константинівна' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/tyurina-valentyna-vasylivna/', thumbnail: src.img+'thumbnail.png', title: 'Тюріна Валентина Василівна' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/melihov-andrij-anatolijovych/', thumbnail: src.img+'fotos/medium-05.jpg', title: 'Меліхов Андрій Анатолійович' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/chuchmaj-dmytro-oleksandrovych/', thumbnail: src.img+'thumbnail.png', title: 'Чучмай Дмитро Олександрович' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/gibalenko-oleksandr-mykolajovych/', thumbnail: src.img+'fotos/medium-06.jpg', title: 'Гібаленко Олександр Миколайович' } )
+			+archive_entry( { share: 'https://events.pstu.edu/project90/vydatni-osobystosti/alekseev-anatolij-kostyantynovych/', thumbnail: src.img+'thumbnail.png', title: 'Алексеев Анатолій Костянтинович' } )
 			include blocks/_pagination
 		.col-xs-12.col-sm-12.col-md-4.col-lg-4
 			include asides/_column

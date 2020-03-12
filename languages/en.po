@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-02-06 15:39+0200\n"
-"PO-Revision-Date: 2020-02-06 15:41+0200\n"
+"POT-Creation-Date: 2020-03-12 16:15+0200\n"
+"PO-Revision-Date: 2020-03-12 16:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -68,27 +68,59 @@ msgstr "Page Templates"
 msgid "Списки темы"
 msgstr "Theme lists"
 
-#: includes/template-functions.php:67
+#: includes/template-functions.php:17
+msgid "Отправить по email"
+msgstr "Email"
+
+#: includes/template-functions.php:18
+msgid "Поделиться в Facebook"
+msgstr "Share on Facebook"
+
+#: includes/template-functions.php:19
+msgid "Поделиться в Twitter"
+msgstr "Share on Twitter"
+
+#: includes/template-functions.php:20
+msgid "Поделиться в LinkedIn"
+msgstr "Share on LinkedIn"
+
+#: includes/template-functions.php:21
+msgid "Отправить по Viber"
+msgstr "Send via Viber"
+
+#: includes/template-functions.php:22
+msgid "Отправить в WhatsApp"
+msgstr "Send to WhatsApp"
+
+#: includes/template-functions.php:23
+msgid "Отправить в Telegram"
+msgstr "Send to Telegram"
+
+#: includes/template-functions.php:30
+msgid "Поделиться"
+msgstr "Share this"
+
+#: includes/template-functions.php:98
 msgid "Главная"
 msgstr "Home"
 
-#: includes/template-functions.php:80
+#: includes/template-functions.php:111
 msgid "Домашняя страница"
 msgstr "Homepage"
 
-#: includes/template-functions.php:149
+#: includes/template-functions.php:180
 msgid "Смотреть предыдущий пост"
 msgstr "View previous post"
 
-#: includes/template-functions.php:153
+#: includes/template-functions.php:184
 msgid "Смотреть следующий пост"
 msgstr "See next post"
 
-#: parts/archive.php:33
+#: parts/archive.php:34
 msgid "Оставлено комментариев"
 msgstr "Comments left"
 
-#: parts/archive.php:37 parts/home/aboutus.php:15 parts/home/jumbotron.php:11
+#: parts/archive.php:38 parts/home/aboutus.php:15 parts/home/jumbotron.php:11
 #: parts/home/news.php:68 scripts/gutenberg.js:307
 #: settings/home/aboutus.php:101 settings/home/jumbotron.php:101
 #: src/scripts/gutenberg/person.js:255
@@ -100,7 +132,7 @@ msgstr "More details"
 msgid "Как к нам приехать"
 msgstr "How to come to us"
 
-#: parts/home/fotos.php:32 settings/home/fotos.php:43
+#: parts/home/fotos.php:34 settings/home/fotos.php:43
 msgid "Галерея"
 msgstr "Gallery"
 
@@ -131,10 +163,10 @@ msgid ""
 "элементов в рамках блока контейнера или обтекания элементов"
 msgstr ""
 "It is used to solve problems arising from the content of \"floating\" "
-"elements within a container block or flow around elements."
+"elements within a container block or flow around elements"
 
 #: scripts/gutenberg.js:8 scripts/gutenberg.js:65 scripts/gutenberg.js:333
-#: scripts/gutenberg.js:379 scripts/gutenberg.js:558
+#: scripts/gutenberg.js:379 scripts/gutenberg.js:560
 #: src/scripts/gutenberg/clearfix.js:8 src/scripts/gutenberg/person.js:13
 #: src/scripts/gutenberg/program.js:12 src/scripts/gutenberg/step.js:13
 #: src/scripts/gutenberg/widget.js:14
@@ -184,15 +216,15 @@ msgstr "employee"
 msgid "Социальные сети"
 msgstr "Social networks"
 
-#: scripts/gutenberg.js:244 scripts/gutenberg.js:490 scripts/gutenberg.js:618
-#: src/scripts/gutenberg/person.js:192 src/scripts/gutenberg/step.js:124
+#: scripts/gutenberg.js:244 scripts/gutenberg.js:492 scripts/gutenberg.js:620
+#: src/scripts/gutenberg/person.js:192 src/scripts/gutenberg/step.js:126
 #: src/scripts/gutenberg/widget.js:74
 msgid "Имя"
 msgstr "Name"
 
-#: scripts/gutenberg.js:253 scripts/gutenberg.js:499
+#: scripts/gutenberg.js:253 scripts/gutenberg.js:501
 #: settings/home/aboutus.php:90 settings/home/jumbotron.php:90
-#: src/scripts/gutenberg/person.js:201 src/scripts/gutenberg/step.js:133
+#: src/scripts/gutenberg/person.js:201 src/scripts/gutenberg/step.js:135
 msgid "Описание"
 msgstr "Description"
 
@@ -206,7 +238,7 @@ msgstr "Event program"
 msgid "программа"
 msgstr "program"
 
-#: scripts/gutenberg.js:336 scripts/gutenberg.js:561
+#: scripts/gutenberg.js:336 scripts/gutenberg.js:563
 #: src/scripts/gutenberg/program.js:15 src/scripts/gutenberg/widget.js:17
 msgid "меню"
 msgstr "menu"
@@ -215,7 +247,7 @@ msgstr "menu"
 msgid "пункты"
 msgstr "points"
 
-#: scripts/gutenberg.js:338 scripts/gutenberg.js:562
+#: scripts/gutenberg.js:338 scripts/gutenberg.js:564
 #: src/scripts/gutenberg/program.js:17 src/scripts/gutenberg/widget.js:18
 msgid "контейнер"
 msgstr "container"
@@ -232,23 +264,23 @@ msgstr "performance"
 msgid "мероприятие"
 msgstr "event"
 
-#: scripts/gutenberg.js:481 src/scripts/gutenberg/step.js:115
+#: scripts/gutenberg.js:483 src/scripts/gutenberg/step.js:117
 msgid "Время проведения"
 msgstr "Time spending"
 
-#: scripts/gutenberg.js:555 src/scripts/gutenberg/widget.js:11
+#: scripts/gutenberg.js:557 src/scripts/gutenberg/widget.js:11
 msgid "Виджет"
 msgstr "Widget"
 
-#: scripts/gutenberg.js:559 src/scripts/gutenberg/widget.js:15
+#: scripts/gutenberg.js:561 src/scripts/gutenberg/widget.js:15
 msgid "виджет"
 msgstr "widget"
 
-#: scripts/gutenberg.js:560 src/scripts/gutenberg/widget.js:16
+#: scripts/gutenberg.js:562 src/scripts/gutenberg/widget.js:16
 msgid "блок"
 msgstr "block"
 
-#: scripts/gutenberg.js:626 src/scripts/gutenberg/widget.js:82
+#: scripts/gutenberg.js:628 src/scripts/gutenberg/widget.js:82
 msgid "Список подстраниц"
 msgstr "List of Subpages"
 

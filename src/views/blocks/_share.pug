@@ -1,0 +1,11 @@
+- var url = ( typeof url == 'undefined' ) ? '' : url;
+.share( data-share-url=''+url )
+	.label Поделиться
+	.overlay
+		button.email( role="button", data-share-type="email" ) #[span.sr-only Отправить по email]
+		button.facebook( role="button", data-share-type="facebook" ) #[span.sr-only Поделиться в Facebook]
+		button.twitter( role="button", data-share-type="twitter" ) #[span.sr-only Поделиться в Twitter]
+		button.linkedin( role="button", data-share-type="linkedin" ) #[span.sr-only Поделиться в LinkedIn]
+		button.viber( role="button", data-share-type="viber" ) #[span.sr-only Отправить в Viber]
+		button.whatsapp( role="button", data-share-type="whatsapp" ) #[span.sr-only Отправить в WhatsApp]
+		button.telegram( role="button", data-share-type="telegram" ) #[span.sr-only Отправить в Telegram]

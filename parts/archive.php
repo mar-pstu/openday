@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 				</div>
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
 					<h3 class="title"><a href="<?php the_permalink( get_the_ID() ); ?>"><?php the_title(); ?></a></h3>
+					<?php the_share_link( wp_get_shortlink() ); ?>
 					<p class="excerpt"><?php echo get_the_excerpt( get_the_ID() ); ?></p>
 					<p class="text-right">
 						<?php if ( get_theme_mod( OPENDAY_SLUG . '_archive_comments_count_flag', true ) && ( get_comments_number( get_the_ID() ) > 0 ) ) : ?>

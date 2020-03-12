@@ -46,6 +46,7 @@
 			},
 			mediaID: {
 				type: 'number',
+				default: '',
 			},
 			mediaAlt: {
 				type: 'string',
@@ -56,6 +57,7 @@
 				source: 'attribute',
 				selector: '.thumbnail',
 				attribute: 'data-src',
+				default: '',
 			},
 			time: {
 				type: 'array',

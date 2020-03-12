@@ -20,7 +20,20 @@ get_header();
 			<?php
 
 				the_pageheader();
-				the_breadcrumbs();
+
+				?>
+
+					<div class="row middle-xs">
+						<div class="col-xs-12 col-sm-6">
+							<?php the_breadcrumbs(); ?>
+						</div>
+						<div class="col-xs-12 col-sm-6 text-right">
+							<div class="display-inline"><?php the_share_link( '' ); ?></div>
+						</div>
+					</div>
+
+				<?php
+
 
 				if ( is_singular() ) {
 					get_template_part( 'parts/singular' );

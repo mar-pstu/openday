@@ -11,7 +11,9 @@ block main
 	.container: .row
 		.col-xs-12.col-sm-12.col-md-8.col-lg-8
 			include blocks/_pageheader
-			include blocks/_breadcrumb
+			.row
+				.col-xs-12.col-sm-6: include blocks/_breadcrumb
+				.col-xs-12.col-sm-6.text-right: .display-inile: include blocks/_share
 			include blocks/_content
 			include blocks/_content
 			include blocks/_pager

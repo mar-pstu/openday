@@ -10,6 +10,37 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 
 
 
+function get_share_link( $link = '' ) {
+	$html = '';
+	$buttons = array();
+	foreach ( array(
+		'email'    => __( 'Отправить по email', OPENDAY_TEXTDOMAIN ),
+		'facebook' => __( 'Поделиться в Facebook', OPENDAY_TEXTDOMAIN ),
+		'twitter'  => __( 'Поделиться в Twitter', OPENDAY_TEXTDOMAIN ),
+		'linkedin' => __( 'Поделиться в LinkedIn', OPENDAY_TEXTDOMAIN ),
+		'viber'    => __( 'Отправить по Viber', OPENDAY_TEXTDOMAIN ),
+		'whatsapp' => __( 'Отправить в WhatsApp', OPENDAY_TEXTDOMAIN ),
+		'telegram' => __( 'Отправить в Telegram', OPENDAY_TEXTDOMAIN ),
+	) as $key => $label ) {
+		$buttons[] = sprintf( '<button class="%1$s" role="button" data-share-type="%1$s"><span class="sr-only">%2$s</span></button>', $key, $label );
+	}
+	$html = sprintf(
+		'<div class="share" data-share-url="%1$s"><div class="label">%2$s</div><div class="overlay">%3$s</div></div>',
+		esc_attr( $link ),
+		__( 'Поделиться', OPENDAY_TEXTDOMAIN ),
+		implode( "\r\n", $buttons )
+	);
+	return $html;
+}
+
+
+
+function the_share_link( $link = '' ) {
+	echo get_share_link( $link );
+}
+
+
+
 function get_custom_logo_img() {
 	$result = __return_empty_string();
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -94,25 +125,25 @@ function the_breadcrumbs() {
 
 
 function get_translate_id( $id, $type = 'post' ) {
-    $result = '';
-    if ( $id && ! empty( $id ) ) {
-        if ( defined( 'POLYLANG_FILE' ) ) {
-            switch ( $type ) {
-                case 'category':
-                    $translate = ( function_exists( 'pll_get_term' ) ) ? pll_get_term( $id, pll_current_language( 'slug' ) ) : $translate;
-                    break;
-                case 'post':
-                case 'page':
-                default:
-                    $translate = ( function_exists( 'pll_get_post' ) ) ? pll_get_post( $id, pll_current_language( 'slug' ) ) : $translate;
-                    break;
-            } // switch
-            $result = ( $translate ) ? $translate : '';
-        } else {
-            $result = $id;
-        }
-    }
-    return $result;
+		$result = '';
+		if ( $id && ! empty( $id ) ) {
+				if ( defined( 'POLYLANG_FILE' ) ) {
+						switch ( $type ) {
+								case 'category':
+										$translate = ( function_exists( 'pll_get_term' ) ) ? pll_get_term( $id, pll_current_language( 'slug' ) ) : $translate;
+										break;
+								case 'post':
+								case 'page':
+								default:
+										$translate = ( function_exists( 'pll_get_post' ) ) ? pll_get_post( $id, pll_current_language( 'slug' ) ) : $translate;
+										break;
+						} // switch
+						$result = ( $translate ) ? $translate : '';
+				} else {
+						$result = $id;
+				}
+		}
+		return $result;
 }
 
 

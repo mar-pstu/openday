@@ -16,7 +16,7 @@ define( 'OPENDAY_ONE_DAY', 60*60*24 );
 
 
 
-
+get_template_part( 'includes/default-settings' );
 get_template_part( 'includes/enqueue' );
 get_template_part( 'includes/template-functions' );
 get_template_part( 'includes/gutenberg' );

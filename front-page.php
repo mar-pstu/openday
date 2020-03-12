@@ -25,4 +25,3 @@ echo "<div class=\"container\">"; // для открытия .container
 
 
 get_footer();
-
