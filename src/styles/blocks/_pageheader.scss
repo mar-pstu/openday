@@ -16,21 +16,16 @@
 		font-size: 2em;
 	}
 
-	.thumbnail {
+	.wp-post-thumbnail {
 		flex-shrink: 0;
 		width: 5em;
-		box-shadow: $box-shadow;
 		@include min-width( 480px ) {
 			width: 8em;
 		}
 	}
 
-	.thumbnail + .title {
+	.wp-post-thumbnail + .title {
 		margin-left: 1em;
-	}
-
-	.wp-post-thumbnail {
-		display: block;
 	}
 
 	h1, h2, p {

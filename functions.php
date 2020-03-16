@@ -139,3 +139,31 @@ function openday_register_sidebars() {
 	) );
 }
 add_action( 'widgets_init', 'openday_register_sidebars' );
+
+
+
+
+function openday_like_processing() {
+	if ( isset( $_GET[ 'security' ] ) && wp_verify_nonce( $_GET[ 'security' ], 'liked' ) ) {
+		if ( isset( $_GET[ 'post_id' ] ) && ! empty( $_GET[ 'client_id' ] ) && ! empty( $_GET[ 'client_id' ] ) ) {
+			$post_id = sanitize_key( $_GET[ 'post_id' ] );
+			$client_id = sanitize_text_field( $_GET[ 'client_id' ] );
+			$liked = get_post_meta(  $post_id, '_liked', false );
+			$action = '';
+			if ( in_array( $client_id, $liked ) ) {
+				delete_post_meta( $post_id, '_liked', $client_id );
+				$action = 'delete';
+			} else {
+				add_post_meta( sanitize_key( $_GET[ 'post_id' ] ), '_liked', $client_id, false );
+				$action = 'add';
+			}
+			wp_send_json_success( array(
+				'action' => $action,
+				'count'  => count( get_post_meta(  $post_id, '_liked', false ) ),
+			) );
+		}
+	}
+	wp_die();
+}
+add_action( 'wp_ajax_liked', 'openday_like_processing' );
+add_action( 'wp_ajax_nopriv_liked', 'openday_like_processing' );

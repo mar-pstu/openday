@@ -41,6 +41,24 @@ function the_share_link( $link = '' ) {
 
 
 
+function get_like_button( $post_id ) {
+	$count = count( get_post_meta( get_the_ID(), '_liked', false ) );
+	return sprintf(
+		'<button class="like" data-like-id="%1$s" data-liked-count="%2$s"><span class="sr-only">%3$s</span></button>',
+		$post_id,
+		( empty( $count ) ) ? '' : esc_attr( $count ),
+		__( 'Поставить лайк', OPENDAY_TEXTDOMAIN )
+	);
+}
+
+
+
+function the_like_button( $post_id ) {
+	echo get_like_button( $post_id );
+}
+
+
+
 function get_custom_logo_img() {
 	$result = __return_empty_string();
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -209,17 +227,21 @@ function the_pageheader() {
 		$title = get_the_archive_title();
 		$excerpt = do_shortcode( get_the_archive_description() );
 		$term = get_queried_object();
-		$thumbnail_id = get_term_meta( $term->term_id, OPENDAY_SLUG . '_thumbnail', true );
+		$thumbnail_url = wp_get_attachment_image_url( get_term_meta( $term->term_id, OPENDAY_SLUG . '_thumbnail', true ), 'thumbnail' );
+	} elseif ( is_search() ) {
+		$title = __( 'Результаты поиска', OPENDAY_TEXTDOMAIN );
+		$excerpt = do_shortcode( get_the_archive_description() );
+		$term = get_queried_object();
+		$thumbnail_url = OPENDAY_URL . 'images/loupe.svg';
 	} else {
 		$title = get_the_title();
 		$excerpt = ( has_excerpt( get_the_ID() ) ) ? get_the_excerpt( get_the_ID() ) : false;
-		$thumbnail_id = __return_empty_string();
-		$thumbnail_flag = __return_true();
+		$thumbnail_flag = true;
 		if ( is_single() ) {
 			$thumbnail_flag = get_theme_mod( OPENDAY_SLUG . '_single_thumbnail_flag', true );
 		}
 		if ( $thumbnail_flag ) {
-			$thumbnail_id = ( has_post_thumbnail( get_the_ID() ) ) ? get_post_thumbnail_id( get_the_ID() ) : false;
+			$thumbnail_url = ( has_post_thumbnail( get_the_ID() ) ) ? get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' ) : '';
 		}
 	}
 	include get_theme_file_path( 'views/pageheader.php' );

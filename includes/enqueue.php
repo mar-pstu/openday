@@ -36,7 +36,12 @@ add_action( 'wp_print_styles', 'openday\print_styles' );
  */
 function scripts() {
 	wp_enqueue_script( 'openday-main', OPENDAY_URL . 'scripts/main.min.js', array( 'jquery', 'fancybox', 'lazyload' ), OPENDAY_VERSION, true );
-	wp_localize_script( 'openday-main', 'OpenDayTheme', array( 'toTopBtn' => 'Наверх' ) );
+	wp_localize_script( 'openday-main', 'OpenDayTheme', array(
+		'toTopBtn' => 'Наверх',
+		'ajaxurl'  => admin_url( 'admin-ajax.php' ),
+		'user_id'  => ( is_user_logged_in() ) ? get_current_user_id() : '',
+		'liked'    => wp_create_nonce( 'liked' ),
+	) );
 	wp_enqueue_script( 'lazyload', OPENDAY_URL . 'scripts/lazyload.min.js', array( 'jquery' ), '1.7.6', true );
 	wp_enqueue_script( 'fancybox', OPENDAY_URL . 'scripts/fancybox.min.js', array( 'jquery' ), '3.3.5', true );
 	wp_enqueue_script( 'superembed', OPENDAY_URL . 'scripts/superembed.min.js', array( 'jquery' ), '3.1', true );

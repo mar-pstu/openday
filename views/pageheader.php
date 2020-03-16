@@ -1,9 +1,12 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { exit; }; ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) { exit; };
+
+?>
+
 <div class="pageheader">
-	<?php if ( $thumbnail_id ) : ?>
-		<a class="fancybox thumbnail" href="<?php echo wp_get_attachment_image_url( $thumbnail_id, 'full', false ); ?>">
-			<img class="lazy wp-post-thumbnail" src="#" data-src="<?php echo wp_get_attachment_image_url( $thumbnail_id, 'thumbnail', false ); ?>" alt="<?php echo esc_attr( $title ); ?>">
-		</a>
+	<?php if ( ! empty( $thumbnail_url ) ) : ?>
+		<img class="lazy wp-post-thumbnail" src="#" data-src="<?php echo esc_attr( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $title ); ?>">
 	<?php endif; ?>
     <h1 class="title"><?php echo $title; ?></h1>
 </div>

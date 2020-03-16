@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-03-12 16:12+0200\n"
-"PO-Revision-Date: 2020-03-12 16:15+0200\n"
+"POT-Creation-Date: 2020-03-15 13:58+0200\n"
+"PO-Revision-Date: 2020-03-15 13:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -101,27 +101,35 @@ msgstr "Надіслати в Telegram"
 msgid "Поделиться"
 msgstr "Поділитися"
 
-#: includes/template-functions.php:98
+#: includes/template-functions.php:50
+msgid "Поставить лайк"
+msgstr "Поставити лайк"
+
+#: includes/template-functions.php:116
 msgid "Главная"
 msgstr "Головна"
 
-#: includes/template-functions.php:111
+#: includes/template-functions.php:129
 msgid "Домашняя страница"
 msgstr "Домашня сторінка"
 
-#: includes/template-functions.php:180
+#: includes/template-functions.php:198
 msgid "Смотреть предыдущий пост"
 msgstr "Дивитися попередній пост"
 
-#: includes/template-functions.php:184
+#: includes/template-functions.php:202
 msgid "Смотреть следующий пост"
 msgstr "Наступний пост"
 
-#: parts/archive.php:34
+#: includes/template-functions.php:232
+msgid "Результаты поиска"
+msgstr "Результати пошуку"
+
+#: parts/archive.php:35
 msgid "Оставлено комментариев"
 msgstr "Залишено коментарів"
 
-#: parts/archive.php:38 parts/home/aboutus.php:15 parts/home/jumbotron.php:11
+#: parts/archive.php:39 parts/home/aboutus.php:15 parts/home/jumbotron.php:11
 #: parts/home/news.php:68 scripts/gutenberg.js:307
 #: settings/home/aboutus.php:101 settings/home/jumbotron.php:101
 #: src/scripts/gutenberg/person.js:255

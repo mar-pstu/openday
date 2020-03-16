@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 					<?php the_share_link( wp_get_shortlink() ); ?>
 					<p class="excerpt"><?php echo get_the_excerpt( get_the_ID() ); ?></p>
 					<p class="text-right">
+						<?php the_like_button( get_the_ID() ); ?>
 						<?php if ( get_theme_mod( OPENDAY_SLUG . '_archive_comments_count_flag', true ) && ( get_comments_number( get_the_ID() ) > 0 ) ) : ?>
 							<a class="comments" href="<?php comments_link(); ?>">
 								<span class="sr-only"><?php _e( 'Оставлено комментариев', OPENDAY_TEXTDOMAIN ); ?></span> <?php comments_number(); ?>

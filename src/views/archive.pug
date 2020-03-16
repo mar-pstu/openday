@@ -19,6 +19,7 @@ mixin archive_entry( args )
 			include blocks/_share
 			p.excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam, omnis perspiciatis reprehenderit temporibus sint porro libero? Id aut nam animi eveniet perferendis repudiandae aperiam, mollitia expedita officia consectetur laboriosam.
 			p.text-right
+				button.like.loading( data-like-id='2020', data-liked-count='10' ) #[span.sr-only Поставить лайк]
 				a.comments( href="#comments" ) #[span.sr-only Оставлено комментариев] 5
 				a.permalink.btn.btn-primary( href="#" ) Подробней
 
