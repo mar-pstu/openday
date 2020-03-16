@@ -26,6 +26,7 @@
     "gulp-zip": "^5.0.1"
   },
   "dependencies": {
+    "acorn": "^7.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-util": "^3.0.8",
     "lodash.template": "^4.5.0",
