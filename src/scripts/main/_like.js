@@ -1,4 +1,4 @@
-( function () {
+jQUery( document ).ready( function () {
 
 
 	function set_like( $button ) {
@@ -85,4 +85,4 @@
 	} );
 
 
-} )();
+} );
