@@ -37,8 +37,6 @@ if ( ! empty( $page_id ) ) {
 			$excerpt = do_shortcode( $parts[ 'main' ], false );
 		}
 		$permalink = get_permalink( $page->ID );
-		if ( empty( $title ) ) $title = apply_filters( 'the_title', $page->post_title, $page->ID );
-		if ( empty( $excerpt ) ) $excerpt = get_the_title( $page->post_excerpt );
 	}
 
 }
