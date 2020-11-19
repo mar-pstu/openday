@@ -10,7 +10,12 @@ $title = get_theme_mod( OPENDAY_SLUG . '_jumbotron_title', get_bloginfo( 'name' 
 $excerpt = get_theme_mod( OPENDAY_SLUG . '_jumbotron_excerpt', get_bloginfo( 'description' ) );
 $label = get_theme_mod( OPENDAY_SLUG . '_jumbotron_label', __( 'Подробней', OPENDAY_TEXTDOMAIN ) );
 $page_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_jumbotron_page_id', '' ), 'page' );
-$permalink = ( empty( $page_id ) ) ? '' : get_permalink( $page_id );
+$permalink = get_theme_mod( OPENDAY_SLUG . '_jumbotron_permalink' );
+
+if ( empty( $permalink ) && ! empty( $page_id ) ) {
+	$permalink = get_permalink( $page_id, false );
+}
+
 $bgi_src = get_theme_mod( OPENDAY_SLUG . '_jumbotron_bgi', OPENDAY_URL . 'images/jumbotron.svg' );
 $timing_of = strtotime( get_theme_mod( OPENDAY_SLUG . '_jumbotron_timestamp', '' ) );
 $current = time();
@@ -37,6 +42,7 @@ if ( function_exists( 'pll__' ) ) {
   $title = pll__( $title );
   $excerpt = pll__( $excerpt );
   $label = pll__( $label );
+  $permalink = pll__( $permalink );
 }
 
 include get_theme_file_path( 'views/home/jumbotron.php' );

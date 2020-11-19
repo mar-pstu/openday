@@ -55,6 +55,22 @@ $wp_customize->add_control(
 ); /**/
 
 
+$wp_customize->add_setting(
+    "{$slug}_jumbotron_permalink",
+    array(
+        'transport'         => 'reset',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+$wp_customize->add_control(
+    "{$slug}_jumbotron_permalink",
+    array(
+        'section'           => "{$slug}_jumbotron",
+        'label'             => __( 'Ссылка на описание', OPENDAY_TEXTDOMAIN ),
+        'type'              => 'text',
+    )
+); /**/
+
 
 $wp_customize->add_setting(
     "{$slug}_jumbotron_title",
@@ -80,14 +96,14 @@ $wp_customize->add_setting(
     array(
         'default'           => get_bloginfo( 'description' ),
         'transport'         => 'reset',
-        'sanitize_callback' => 'sanitize_textarea_field',
+        'sanitize_callback' => 'esc_url_raw',
     )
 );
 $wp_customize->add_control(
     "{$slug}_jumbotron_excerpt",
     array(
         'section'           => "{$slug}_jumbotron",
-        'label'             => __( 'Описание', OPENDAY_TEXTDOMAIN ),
+        'label'             => __( 'Ссылка', OPENDAY_TEXTDOMAIN ),
         'type'              => 'textarea',
     )
 ); /**/
@@ -119,7 +135,7 @@ $wp_customize->add_setting(
     array(
         'default'           => '',
         'transport'         => 'reset',
-        'sanitize_callback' => 'sanitize_url',
+        'sanitize_callback' => 'esc_url_raw',
     )
 );
 $wp_customize->add_control(
