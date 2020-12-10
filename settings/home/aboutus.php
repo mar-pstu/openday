@@ -113,6 +113,24 @@ $wp_customize->add_control(
 ); /**/
 
 
+$wp_customize->add_setting(
+    "{$slug}_aboutus_permalink",
+    array(
+        'default'           => '',
+        'transport'         => 'reset',
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);
+$wp_customize->add_control(
+    "{$slug}_aboutus_permalink",
+    array(
+        'section'           => "{$slug}_aboutus",
+        'label'             => __( 'Ссылка на описание', OPENDAY_TEXTDOMAIN ),
+        'type'              => 'text',
+    )
+); /**/
+
+
 
 $wp_customize->add_setting(
     "{$slug}_aboutus_thumbnail",

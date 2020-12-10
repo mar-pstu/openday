@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 
 
 $page_id = openday\get_translate_id( get_theme_mod( OPENDAY_SLUG . '_aboutus_page_id', '' ), 'page' );
-$permalink = '';
+$permalink = get_theme_mod( OPENDAY_SLUG . '_aboutus_permalink', '' );;
 $title = get_theme_mod( OPENDAY_SLUG . '_aboutus_title', '' );
 $excerpt = get_theme_mod( OPENDAY_SLUG . '_aboutus_excerpt', '' );
 $thumbnail = '';
@@ -20,6 +20,7 @@ if ( function_exists( 'pll__' ) ) {
 	$title = pll__( $title );
 	$excerpt = pll__( $excerpt );
 	$label = pll__( $label );
+	$permalink = pll__( $permalink );
 }
 
 
@@ -38,7 +39,9 @@ if ( ! empty( $page_id ) ) {
 			$parts = get_extended( $page->post_content );
 			$excerpt = do_shortcode( $parts[ 'main' ], false );
 		}
-		$permalink = get_permalink( $page->ID );
+		if ( empty( trim( $permalink ) ) ) {
+			$permalink = get_permalink( $page->ID );
+		}
 	}
 
 }

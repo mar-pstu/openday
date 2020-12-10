@@ -25,9 +25,8 @@ if ( ! empty( $page_id ) ) {
 		}
 
 		$content = do_shortcode( $page->post_content );
-
-	  if ( empty( $title ) ) $title = apply_filters( 'the_title', $page->post_title, $page->ID );
-	  if ( empty( $description ) ) $description = $page->post_excerpt;
+		
+		if ( empty( $description ) ) $description = $page->post_excerpt;
 
 		include get_theme_file_path( 'views/home/section.php' );
 		

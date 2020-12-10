@@ -18,6 +18,7 @@ foreach ( array(
     'error404_description',
     'aboutus_title',
     'aboutus_excerpt',
+    'aboutus_permalink',
     'aboutus_label',
     'direction_title',
     'direction_description',

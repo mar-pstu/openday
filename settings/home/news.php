@@ -12,7 +12,7 @@ $wp_customize->add_section(
         'title'            => __( 'Новости', OPENDAY_TEXTDOMAIN ),
         'priority'         => 10,
         'description'      => __( 'Секция главной страницы. Якорь #news. Новости (посты) берутся из категории.', OPENDAY_TEXTDOMAIN ),
-        'panel'            => OPENDAY_SLUG
+        'panel'            => "{$slug}_home",
     )
 ); /**/
 

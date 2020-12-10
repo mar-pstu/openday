@@ -96,14 +96,14 @@ $wp_customize->add_setting(
     array(
         'default'           => get_bloginfo( 'description' ),
         'transport'         => 'reset',
-        'sanitize_callback' => 'esc_url_raw',
+        'sanitize_callback' => 'sanitize_textarea_field',
     )
 );
 $wp_customize->add_control(
     "{$slug}_jumbotron_excerpt",
     array(
         'section'           => "{$slug}_jumbotron",
-        'label'             => __( 'Ссылка', OPENDAY_TEXTDOMAIN ),
+        'label'             => __( 'Описание', OPENDAY_TEXTDOMAIN ),
         'type'              => 'textarea',
     )
 ); /**/
