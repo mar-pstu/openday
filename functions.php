@@ -82,6 +82,8 @@ function openday_theme_supports() {
 		}
 		return $items;
 	} );
+	add_filter( 'term_description', 'shortcode_unautop');
+	add_filter( 'term_description', 'do_shortcode' );
 }
 add_action( 'after_setup_theme', 'openday_theme_supports' );
 
